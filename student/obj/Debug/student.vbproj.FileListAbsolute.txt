@@ -1,0 +1,10 @@
+C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\student\bin\Debug\student.exe
+C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\student\bin\Debug\student.pdb
+C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\student\bin\Debug\student.xml
+C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\student\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\student\obj\Debug\student.Resources.resources
+C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\student\obj\Debug\student.vbproj.GenerateResource.Cache
+C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\student\obj\Debug\student.exe
+C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\student\obj\Debug\student.xml
+C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\student\obj\Debug\student.pdb
+C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\student\obj\Debug\student.student.resources

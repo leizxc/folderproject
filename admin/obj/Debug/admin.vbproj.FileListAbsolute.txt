@@ -1,0 +1,10 @@
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\admin\bin\Debug\admin.exe
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\admin\bin\Debug\admin.pdb
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\admin\bin\Debug\admin.xml
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\admin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\admin\obj\Debug\admin.admin.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\admin\obj\Debug\admin.Resources.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\admin\obj\Debug\admin.vbproj.GenerateResource.Cache
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\admin\obj\Debug\admin.exe
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\admin\obj\Debug\admin.xml
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\admin\obj\Debug\admin.pdb

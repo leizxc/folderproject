@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "homepage", "homepage\homepage.vbproj", "{A86A5647-1666-4414-B589-2FE0603533FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "student", "student", "{A4DC5187-A79E-4070-8D5A-59CBA2D97036}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A86A5647-1666-4414-B589-2FE0603533FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86A5647-1666-4414-B589-2FE0603533FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86A5647-1666-4414-B589-2FE0603533FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86A5647-1666-4414-B589-2FE0603533FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
