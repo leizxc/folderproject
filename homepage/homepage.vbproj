@@ -40,6 +40,10 @@
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.AddIn">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -74,6 +78,18 @@
     <Compile Include="admin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="student\assessment.Designer.vb">
+      <DependentUpon>assessment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student\assessment.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="student\profilestudent.Designer.vb">
+      <DependentUpon>profilestudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student\profilestudent.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="student\sessionlogin.vb" />
     <Compile Include="student\home.Designer.vb">
       <DependentUpon>home.vb</DependentUpon>
@@ -86,18 +102,6 @@
     </Compile>
     <Compile Include="student\grades.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="student\assessment.Designer.vb">
-      <DependentUpon>assessment.vb</DependentUpon>
-    </Compile>
-    <Compile Include="student\assessment.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="student\profilestudent.Designer.vb">
-      <DependentUpon>profilestudent.vb</DependentUpon>
-    </Compile>
-    <Compile Include="student\profilestudent.vb">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="cashier.Designer.vb">
       <DependentUpon>cashier.vb</DependentUpon>
@@ -253,7 +257,41 @@
     <None Include="Resources\home.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a5a4c836-40ea-4e6f-85be-76b3daf62ff4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a5a4c836-40ea-4e6f-85be-76b3daf62ff41.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\megaphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\megaphone %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

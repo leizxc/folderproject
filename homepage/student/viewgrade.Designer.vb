@@ -28,8 +28,10 @@ Partial Class viewgrade
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
         Me.Button1.Location = New System.Drawing.Point(175, 266)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(211, 57)
@@ -39,8 +41,10 @@ Partial Class viewgrade
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.Black
         Me.Button2.Location = New System.Drawing.Point(544, 266)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(211, 57)
@@ -52,12 +56,11 @@ Partial Class viewgrade
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.BackColor = System.Drawing.Color.Transparent
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "viewgrade"
-        Me.Size = New System.Drawing.Size(977, 590)
+        Me.Size = New System.Drawing.Size(979, 592)
         Me.ResumeLayout(False)
 
     End Sub

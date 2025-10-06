@@ -108,10 +108,9 @@ Public Class Form
         Button2.FlatStyle = FlatStyle.Flat
         Button3.FlatStyle = FlatStyle.Flat
 
-        Button1.FlatAppearance.MouseOverBackColor = Color.Blue
-        Button2.FlatAppearance.MouseOverBackColor = Color.Blue
-        Button3.FlatAppearance.MouseOverBackColor = Color.Blue
-
+        Button1.FlatAppearance.MouseOverBackColor = Color.LightBlue
+        Button2.FlatAppearance.MouseOverBackColor = Color.LightBlue
+        Button3.FlatAppearance.MouseOverBackColor = Color.LightBlue
 
     End Sub
 
@@ -134,7 +133,7 @@ Public Class Form
         If activebutton IsNot Nothing Then
             activebutton.BackColor = SystemColors.Control
         End If
-        btn.BackColor = Color.Blue
+        btn.BackColor = Color.LightBlue
         activebutton = btn
     End Sub
 

@@ -132,30 +132,33 @@ Partial Class Form
         '
         'Button3
         '
+        Me.Button3.BackColor = System.Drawing.Color.White
         Me.Button3.Location = New System.Drawing.Point(232, 288)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 5
         Me.Button3.Text = "CASHIER"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.White
         Me.Button2.Location = New System.Drawing.Point(139, 288)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(87, 23)
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "PROFESSOR"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(57, 288)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "STUDENT"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label2
         '

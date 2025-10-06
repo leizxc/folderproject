@@ -118,34 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\543025592_1495905921427403_7928225758997697633_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bg_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="company_pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\company pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Copilot_20250917_190320" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Copilot_20250917_190320.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="log-out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log-out.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="company_pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\company pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bill.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chart.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cleanlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo2-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pfl_pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pfl pic.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="a5a4c836-40ea-4e6f-85be-76b3daf62ff4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a5a4c836-40ea-4e6f-85be-76b3daf62ff4.jpeg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="megaphone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\megaphone.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\543025592_1495905921427403_7928225758997697633_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a5a4c836-40ea-4e6f-85be-76b3daf62ff41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a5a4c836-40ea-4e6f-85be-76b3daf62ff41.jpeg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home (1).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ed81f9ce-5022-4816-842d-70903f861b5a.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Copilot_20250917_190320" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Copilot_20250917_190320.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home (2).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pfl_pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pfl pic.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="megaphone (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\megaphone (1).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
