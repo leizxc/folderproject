@@ -1,9 +1,11 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Text
+Imports System.Security.Cryptography
+
 Public Class Form
     Dim connector As New MySqlConnection("server=localhost; userid=root; password=; database=database_panel")
     Dim selectrole As String = ""
     Dim activebutton As Button = Nothing
-
 
     Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
 
@@ -41,61 +43,61 @@ Public Class Form
         Dim reg As New register()
         reg.Show()
         Me.Hide()
-
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        Dim forgot As New recover()
-        forgot.Show()
-        Me.Hide()
+       
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+
         Dim username As String = TextBox1.Text.Trim()
         Dim password As String = TextBox2.Text.Trim()
 
-        If username = "" Or password = "" Then
-            MessageBox.Show("PLEASE INPUT YOUR ACCOUNT!!")
+        If username = "" Or password = "" Or selectrole = "" Then
+            MessageBox.Show("PLEASE INPUT YOUR ACCOUNT AND SELECT ROLE!!")
             Exit Sub
         End If
 
         Try
-            Dim connector As New MySqlConnection("server=localhost; userid=root; password=; database = database_panel")
+            Dim connector As New MySqlConnection("server=localhost; userid=root; password=; database=database_panel")
             connector.Open()
 
-            Dim query As String = "SELECT * FROM account WHERE username=@user AND passwordusername=@pass AND role =@role "
+            Dim query As String = "SELECT * FROM account WHERE role='" & selectrole & "' AND username='" & username & "' AND passwordusername='" & password & "'"
             Dim command As New MySqlCommand(query, connector)
-            command.Parameters.AddWithValue("@role", selectrole.ToString().ToUpper)
-            command.Parameters.AddWithValue("@user", username)
-            command.Parameters.AddWithValue("@pass", password)
-
             Dim reader As MySqlDataReader = command.ExecuteReader()
-
 
             If reader.HasRows Then
                 reader.Read()
-                sessionlogin.loggedinstudentid = selectrole.ToUpper()
+                sessionlogin.loginrole = selectrole.ToUpper()
+
                 If selectrole = "STUDENT" Then
                     student.Show()
-                    Me.Hide()
-
                 ElseIf selectrole = "PROFESSOR" Then
                     prof.Show()
-                    Me.Hide()
-
                 ElseIf selectrole = "CASHIER" Then
                     cashier.Show()
-                    Me.Hide()
-
                 End If
 
+                Me.Hide()
             Else
                 MessageBox.Show("INVALID USERNAME OR PASSWORD OR ROLE", "INVALID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+
+                TextBox1.Text = ""
+                TextBox2.Text = ""
+                selectrole = ""
+                If activebutton IsNot Nothing Then
+                    activebutton.BackColor = SystemColors.Control
+                    activebutton = Nothing
+                End If
+                TextBox1.Focus()
             End If
+
             reader.Close()
             connector.Close()
         Catch ex As Exception
-            MessageBox.Show("ERROR:" & ex.Message)
+            MessageBox.Show("ERROR: " & ex.Message)
         End Try
 
     End Sub

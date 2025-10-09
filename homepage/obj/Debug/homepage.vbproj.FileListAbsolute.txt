@@ -21,12 +21,9 @@ C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.admin.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.cashier.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.prof.resources
-C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.register.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.student.resources
-C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.recover.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.profilestudent.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.viewgrade.resources
-C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.grades.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.assessment.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.home.resources
 C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.admin.resources

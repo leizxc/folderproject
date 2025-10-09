@@ -60,23 +60,16 @@ Namespace My.Resources
             End Set
         End Property
         
-        Friend ReadOnly Property a5a4c836_40ea_4e6f_85be_76b3daf62ff4() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("a5a4c836-40ea-4e6f-85be-76b3daf62ff4", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        Friend ReadOnly Property a5a4c836_40ea_4e6f_85be_76b3daf62ff41() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("a5a4c836-40ea-4e6f-85be-76b3daf62ff41", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
         Friend ReadOnly Property background() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("background", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property background_imgstudent() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("background_imgstudent", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -91,6 +84,13 @@ Namespace My.Resources
         Friend ReadOnly Property bill() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("bill", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property cando() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cando", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -123,6 +123,20 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property eye() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("eye", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property eyee() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("eyee", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property home() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("home", resourceCulture)
@@ -130,30 +144,30 @@ Namespace My.Resources
             End Get
         End Property
         
-        Friend ReadOnly Property home__1_() As System.Drawing.Bitmap
+        Friend ReadOnly Property home_1() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("home (1)", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("home_1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         
-        Friend ReadOnly Property home__2_() As System.Drawing.Bitmap
+        Friend ReadOnly Property homeyy_1() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("home (2)", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("homeyy_1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         
-        Friend ReadOnly Property home1() As System.Drawing.Bitmap
+        Friend ReadOnly Property KULAM() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("home1", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("KULAM", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         
         Friend ReadOnly Property log_out() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("log-out", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("log_out", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -172,6 +186,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property marketing() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("marketing", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property megaphone() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("megaphone", resourceCulture)
@@ -179,9 +200,9 @@ Namespace My.Resources
             End Get
         End Property
         
-        Friend ReadOnly Property megaphone__1_() As System.Drawing.Bitmap
+        Friend ReadOnly Property megaphoneee() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("megaphone (1)", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("megaphoneee", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

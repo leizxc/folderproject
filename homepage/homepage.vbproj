@@ -17,6 +17,22 @@
     <OptionCompare>Binary</OptionCompare>
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ApplicationIcon>jmmu_logo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -78,6 +94,18 @@
     <Compile Include="admin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="recover.Designer.vb">
+      <DependentUpon>recover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register.Designer.vb">
+      <DependentUpon>register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="register.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="student\assessment.Designer.vb">
       <DependentUpon>assessment.vb</DependentUpon>
     </Compile>
@@ -96,12 +124,6 @@
     </Compile>
     <Compile Include="student\home.vb">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="student\grades.Designer.vb">
-      <DependentUpon>grades.vb</DependentUpon>
-    </Compile>
-    <Compile Include="student\grades.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="cashier.Designer.vb">
       <DependentUpon>cashier.vb</DependentUpon>
@@ -135,18 +157,6 @@
       <DependentUpon>prof.vb</DependentUpon>
     </Compile>
     <Compile Include="prof.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="recover.Designer.vb">
-      <DependentUpon>recover.vb</DependentUpon>
-    </Compile>
-    <Compile Include="recover.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="register.Designer.vb">
-      <DependentUpon>register.vb</DependentUpon>
-    </Compile>
-    <Compile Include="register.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="student\student.Designer.vb">
@@ -185,20 +195,8 @@
       <DependentUpon>prof.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="recover.resx">
-      <DependentUpon>recover.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="register.resx">
-      <DependentUpon>register.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="student\assessment.resx">
       <DependentUpon>assessment.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="student\grades.resx">
-      <DependentUpon>grades.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="student\home.resx">
@@ -292,6 +290,68 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\megaphone %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3f699555-07ed-4446-9892-8952addfc827.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeyy_1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_imgstudent.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marketing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\megaphone %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cando.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KULAM.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="jmmu_logo.ico" />
+    <None Include="Resources\%24this.Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="register\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

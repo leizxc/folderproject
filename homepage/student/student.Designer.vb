@@ -79,9 +79,11 @@ Partial Class student
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.Transparent
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Image = Global.homepage.My.Resources.Resources.home__2_
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Image = Global.homepage.My.Resources.Resources.home_1
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button3.Location = New System.Drawing.Point(34, 247)
         Me.Button3.Name = "Button3"
@@ -92,8 +94,10 @@ Partial Class student
         '
         'Button5
         '
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.Black
+        Me.Button5.ForeColor = System.Drawing.Color.White
         Me.Button5.Image = Global.homepage.My.Resources.Resources.log_out
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button5.Location = New System.Drawing.Point(34, 654)
@@ -105,8 +109,10 @@ Partial Class student
         '
         'Button4
         '
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.Black
+        Me.Button4.ForeColor = System.Drawing.Color.White
         Me.Button4.Image = Global.homepage.My.Resources.Resources.bill
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button4.Location = New System.Drawing.Point(34, 525)
@@ -118,8 +124,10 @@ Partial Class student
         '
         'Button2
         '
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.Black
+        Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Image = Global.homepage.My.Resources.Resources.chart
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.Location = New System.Drawing.Point(34, 433)
@@ -131,8 +139,10 @@ Partial Class student
         '
         'Button1
         '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Image = Global.homepage.My.Resources.Resources.user
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(34, 339)
@@ -146,9 +156,9 @@ Partial Class student
         '
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(201, 3)
+        Me.Panel2.Location = New System.Drawing.Point(201, -5)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1384, 849)
+        Me.Panel2.Size = New System.Drawing.Size(1384, 857)
         Me.Panel2.TabIndex = 1
         '
         'Label1
@@ -164,7 +174,7 @@ Partial Class student
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.BackgroundImage = Global.homepage.My.Resources.Resources.a5a4c836_40ea_4e6f_85be_76b3daf62ff41
+        Me.BackgroundImage = Global.homepage.My.Resources.Resources.background_imgstudent
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1540, 845)
         Me.Controls.Add(Me.Panel2)

@@ -1,6 +1,8 @@
-﻿Public Class student
+﻿Imports MySql.Data.MySqlClient
+Public Class student
     Dim homes As New home()
-    Dim activebtn As Button = Nothing
+
+
 
     Private Sub student_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
@@ -21,7 +23,7 @@
     End Sub
     'hoverbutton in leftside panel
     Private Sub button_hover(ByVal sender As Object, ByVal e As EventArgs) Handles Button1.MouseEnter, Button2.MouseEnter, Button3.MouseEnter, Button4.MouseEnter, Button5.MouseEnter
-        CType(sender, Button).BackColor = Color.FromArgb(50, 50, 50)
+        CType(sender, Button).BackColor = Color.White
     End Sub
 
     Private Sub button_leave(ByVal sender As Object, ByVal e As EventArgs) Handles Button1.MouseLeave, Button2.MouseLeave, Button3.MouseLeave, Button4.MouseLeave, Button5.MouseLeave
@@ -40,7 +42,7 @@
     Private Sub loadusercontrol(ByVal uc As UserControl)
         Panel2.Controls.Clear()
         uc.Dock = DockStyle.Fill 'para ma fill ng user control yung lahat ng panel
-       
+
         Panel2.Controls.Add(uc)
         uc.BringToFront()
     End Sub
@@ -54,7 +56,6 @@
         highlightbutton(Button1)
         Dim profilestudent As New profilestudent()
         loadusercontrol(profilestudent)
-
     End Sub
 
     Private Sub MENU_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)

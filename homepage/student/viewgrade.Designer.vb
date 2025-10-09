@@ -24,6 +24,8 @@ Partial Class viewgrade
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -32,7 +34,7 @@ Partial Class viewgrade
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(175, 266)
+        Me.Button1.Location = New System.Drawing.Point(316, 51)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(211, 57)
         Me.Button1.TabIndex = 1
@@ -45,26 +47,37 @@ Partial Class viewgrade
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(544, 266)
+        Me.Button2.Location = New System.Drawing.Point(694, 51)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(211, 57)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "2nd SEM"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(193, 210)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(847, 475)
+        Me.DataGridView1.TabIndex = 3
+        '
         'viewgrade
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Transparent
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "viewgrade"
-        Me.Size = New System.Drawing.Size(979, 592)
+        Me.Size = New System.Drawing.Size(1313, 770)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 
 End Class
