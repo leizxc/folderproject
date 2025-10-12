@@ -37,3 +37,79 @@ C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\h
 C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.profilestudent.resources
 C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.student.resources
 C:\Users\Kath\OneDrive\ドキュメント\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.viewgrade.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.register.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.exe
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.xml
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.pdb
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\bin\Debug\homepage.exe
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\bin\Debug\homepage.pdb
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\bin\Debug\homepage.xml
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.admin.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Backup_Restore.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.cashier.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Form.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Resources.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.prof.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.register.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Registration_of_User.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.assessment.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.home.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.profilestudent.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.student.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.viewgrade.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Unlock_Account.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.vbproj.GenerateResource.Cache
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Dashboard.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Prof_Sal.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.students_acc.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.updatecas.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.ForgetPassword.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.recover.resources
+C:\Users\My PC\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.studentlist.resources
+E:\DITO ILAGAY YUNG MGA GAWA NYO LAGAY NYO DIN ROLE KUNG ANO YANG NILAGAY NYO\homepage\homepage\obj\Debug\homepage.exe
+E:\DITO ILAGAY YUNG MGA GAWA NYO LAGAY NYO DIN ROLE KUNG ANO YANG NILAGAY NYO\homepage\homepage\obj\Debug\homepage.xml
+E:\DITO ILAGAY YUNG MGA GAWA NYO LAGAY NYO DIN ROLE KUNG ANO YANG NILAGAY NYO\homepage\homepage\obj\Debug\homepage.pdb
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Backup_Restore.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.studentlist.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Dashboard.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.classes.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.recover.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Prof_Sal.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Registration_of_User.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.students_acc.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.SC_BSCE1.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.SC_BSCE2.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.SC_BSCE3.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.SC_BSCE4.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.SC_BSIS1.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.SC_BSIS2.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.SC_BSIS3.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.SC_BSIS4.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.SC_BSIT1.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.SC_BSIT2.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.sched.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.section.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Unlock_Account.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.updatecas.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.timevb.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSCE1ST.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSCE2ND.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSCE3RD.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSCE4TH.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.SC_BSCS1ST.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSCS2ND.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSCS3RD.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSCS4TH.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSIS1ST.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSIS3RD.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSIS4TH.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSMA1ST.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSMA2ND.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSMA3RD.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSMA4TH.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSIT2ND.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSIS2ND.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSIT1ST.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSIT3RD.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.UC_BSIT4TH.resources

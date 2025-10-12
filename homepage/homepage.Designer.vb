@@ -24,6 +24,8 @@ Partial Class Form
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form))
         Me.Panel1 = New System.Windows.Forms.Panel
+        Me.Button7 = New System.Windows.Forms.Button
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
         Me.Button6 = New System.Windows.Forms.Button
@@ -34,7 +36,6 @@ Partial Class Form
         Me.Button3 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
-        Me.Label2 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.Panel1.SuspendLayout()
@@ -43,8 +44,10 @@ Partial Class Form
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Button7)
+        Me.Panel1.Controls.Add(Me.CheckBox1)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Button6)
@@ -55,36 +58,58 @@ Partial Class Form
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(510, 76)
+        Me.Panel1.Location = New System.Drawing.Point(510, 33)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(359, 538)
+        Me.Panel1.Size = New System.Drawing.Size(359, 595)
         Me.Panel1.TabIndex = 0
+        '
+        'Button7
+        '
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Location = New System.Drawing.Point(139, 252)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(87, 30)
+        Me.Button7.TabIndex = 13
+        Me.Button7.Text = "select role:"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(313, 386)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox1.TabIndex = 1
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 332)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(9, 353)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 13)
+        Me.Label4.Size = New System.Drawing.Size(72, 15)
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "USERNAME:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 363)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(9, 385)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(73, 13)
+        Me.Label3.Size = New System.Drawing.Size(75, 15)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "PASSWORD:"
         '
         'Button6
         '
         Me.Button6.BackColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(57, 401)
+        Me.Button6.Location = New System.Drawing.Point(57, 425)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(250, 27)
         Me.Button6.TabIndex = 10
@@ -94,9 +119,9 @@ Partial Class Form
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(57, 442)
+        Me.Button5.Location = New System.Drawing.Point(57, 473)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(121, 23)
+        Me.Button5.Size = New System.Drawing.Size(121, 35)
         Me.Button5.TabIndex = 9
         Me.Button5.Text = "Register"
         Me.Button5.UseVisualStyleBackColor = False
@@ -104,9 +129,9 @@ Partial Class Form
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(186, 442)
+        Me.Button4.Location = New System.Drawing.Point(184, 473)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(121, 23)
+        Me.Button4.Size = New System.Drawing.Size(123, 35)
         Me.Button4.TabIndex = 8
         Me.Button4.Text = "Forgot Password"
         Me.Button4.UseVisualStyleBackColor = False
@@ -114,16 +139,17 @@ Partial Class Form
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(88, 358)
+        Me.TextBox2.Location = New System.Drawing.Point(88, 381)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(219, 26)
+        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBox2.Size = New System.Drawing.Size(219, 22)
         Me.TextBox2.TabIndex = 7
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(88, 327)
+        Me.TextBox1.Location = New System.Drawing.Point(88, 348)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(219, 25)
@@ -132,9 +158,12 @@ Partial Class Form
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.White
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Location = New System.Drawing.Point(232, 288)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(75, 31)
         Me.Button3.TabIndex = 5
         Me.Button3.Text = "CASHIER"
         Me.Button3.UseVisualStyleBackColor = False
@@ -142,9 +171,12 @@ Partial Class Form
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.White
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Location = New System.Drawing.Point(139, 288)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(87, 23)
+        Me.Button2.Size = New System.Drawing.Size(87, 31)
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "PROFESSOR"
         Me.Button2.UseVisualStyleBackColor = False
@@ -152,22 +184,15 @@ Partial Class Form
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(57, 288)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(75, 31)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "STUDENT"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(152, 259)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 14)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Select Role"
         '
         'Label1
         '
@@ -185,7 +210,7 @@ Partial Class Form
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = Global.homepage.My.Resources.Resources.logo
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Location = New System.Drawing.Point(107, 35)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(145, 147)
@@ -196,9 +221,9 @@ Partial Class Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.homepage.My.Resources.Resources.company_pic
+        Me.BackgroundImage = Global.homepage.My.Resources.Resources.leleiii
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1322, 626)
+        Me.ClientSize = New System.Drawing.Size(1322, 717)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form"
@@ -216,7 +241,6 @@ Partial Class Form
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
@@ -224,5 +248,7 @@ Partial Class Form
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Button7 As System.Windows.Forms.Button
 
 End Class

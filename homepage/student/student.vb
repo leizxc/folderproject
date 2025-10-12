@@ -23,7 +23,7 @@ Public Class student
     End Sub
     'hoverbutton in leftside panel
     Private Sub button_hover(ByVal sender As Object, ByVal e As EventArgs) Handles Button1.MouseEnter, Button2.MouseEnter, Button3.MouseEnter, Button4.MouseEnter, Button5.MouseEnter
-        CType(sender, Button).BackColor = Color.White
+        CType(sender, Button).BackColor = Color.LightBlue
     End Sub
 
     Private Sub button_leave(ByVal sender As Object, ByVal e As EventArgs) Handles Button1.MouseLeave, Button2.MouseLeave, Button3.MouseLeave, Button4.MouseLeave, Button5.MouseLeave

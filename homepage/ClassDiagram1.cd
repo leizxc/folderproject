@@ -75,13 +75,6 @@
       <FileName>student\assessment.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="homepage.register" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gQABEECgEKAEAAAAIFCgEJgCAAgRgAABBEAYAAAAAAA=</HashCode>
-      <FileName>register.vb</FileName>
-    </TypeIdentifier>
-  </Class>
   <Module Name="homepage.sessionlogin" Collapsed="true">
     <Position X="4" Y="4.75" Width="1.5" />
     <TypeIdentifier>
