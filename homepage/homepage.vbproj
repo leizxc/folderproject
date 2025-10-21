@@ -63,6 +63,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core">
@@ -123,6 +124,12 @@
       <DependentUpon>classes.vb</DependentUpon>
     </Compile>
     <Compile Include="professor\classes.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="student\profilestudent.designer.vb">
+      <DependentUpon>profilestudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student\profilestudent.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="recover\recover.designer.vb">
@@ -267,12 +274,6 @@
       <DependentUpon>assessment.vb</DependentUpon>
     </Compile>
     <Compile Include="student\assessment.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="student\profilestudent.Designer.vb">
-      <DependentUpon>profilestudent.vb</DependentUpon>
-    </Compile>
-    <Compile Include="student\profilestudent.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="module\sessionlogin.vb" />
@@ -491,6 +492,10 @@
       <DependentUpon>classes.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="student\profilestudent.resx">
+      <DependentUpon>profilestudent.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="recover\recover.resx">
       <DependentUpon>recover.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -575,10 +580,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="student\home.resx">
       <DependentUpon>home.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="student\profilestudent.resx">
-      <DependentUpon>profilestudent.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="student\student.resx">
@@ -818,7 +819,10 @@
     <None Include="Resources\graduation.png" />
     <None Include="Resources\key.png" />
     <None Include="Resources\backup.png" />
+    <None Include="Resources\e8e079a2-3f76-4e22-824d-79c3e712fe25.jpeg" />
+    <None Include="Resources\ac442551-2536-4fb8-a8a8-478ca80d3a17.jpeg" />
     <Content Include="Resources\time-left.png" />
+    <None Include="Resources\user %282%29.png" />
     <None Include="Resources\user %281%29.png" />
     <None Include="Resources\unlock.png" />
     <None Include="Resources\time-left1.png" />

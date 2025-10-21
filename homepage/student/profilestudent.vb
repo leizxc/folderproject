@@ -4,30 +4,35 @@ Public Class profilestudent
 
     Private Sub profilestudent_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-    End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-     
         Try
-            Using conn As New MySqlConnection(connection)
-                conn.Open()
+            Dim conn As New MySqlConnection(connection)
+            conn.Open()
 
-                Dim query As String = "SELECT * FROM stud_prfl"
-                Dim adapter As New MySqlDataAdapter(query, conn)
-                Dim table As New DataTable()
-                adapter.Fill(table)
-                DataGridView1.DataSource = table
-                'design
-                '  DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-                ' DataGridView1.RowsDefaultCellStyle.BackColor = Drawing.Color.Aquamarine
-                ' DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Drawing.Color.White
-            End Using
+            Dim cmdProfile As New MySqlCommand("SELECT * FROM stud_prfl", conn)
+            Dim reader As MySqlDataReader = cmdProfile.ExecuteReader()
+
+            If reader.Read() Then
+                txtid.Text = reader("id")
+                txtname.Text = reader("frstname")
+                txtlastname.Text = reader("lstname")
+                txtmiddlename.Text = reader("mname")
+                txtage.Text = reader("age")
+                txtgender.Text = reader("gender")
+                txtbirth.Text = reader("birthday")
+                txtadd.Text = reader("full_address")
+                txtcontact.Text = reader("contact_num")
+                txtcourse.Text = reader("course")
+                txtstatus.Text = reader("status")
+            End If
+            reader.Close()
+            conn.Close()
         Catch ex As Exception
-            MessageBox.Show("ERROR" & ex.Message)
+            MessageBox.Show("Error loading profile: " & ex.Message)
         End Try
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class

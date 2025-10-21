@@ -105,7 +105,7 @@ Partial Class admin
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = Global.homepage.My.Resources.Resources.user__1_
+        Me.Button2.Image = Global.homepage.My.Resources.Resources.user1
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.Location = New System.Drawing.Point(14, 335)
         Me.Button2.Name = "Button2"

@@ -24,7 +24,7 @@ Partial Class student
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(student))
         Me.Panel1 = New System.Windows.Forms.Panel
-        Me.label2 = New System.Windows.Forms.Label
+        Me.txtlname = New System.Windows.Forms.Label
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.Button3 = New System.Windows.Forms.Button
         Me.Button5 = New System.Windows.Forms.Button
@@ -42,7 +42,7 @@ Partial Class student
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.label2)
+        Me.Panel1.Controls.Add(Me.txtlname)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button5)
@@ -54,17 +54,17 @@ Partial Class student
         Me.Panel1.Size = New System.Drawing.Size(190, 734)
         Me.Panel1.TabIndex = 0
         '
-        'label2
+        'txtlname
         '
-        Me.label2.AutoSize = True
-        Me.label2.BackColor = System.Drawing.Color.Transparent
-        Me.label2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label2.ForeColor = System.Drawing.Color.White
-        Me.label2.Location = New System.Drawing.Point(59, 179)
-        Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(107, 30)
-        Me.label2.TabIndex = 8
-        Me.label2.Text = "STUDENT"
+        Me.txtlname.AutoSize = True
+        Me.txtlname.BackColor = System.Drawing.Color.Transparent
+        Me.txtlname.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtlname.ForeColor = System.Drawing.Color.White
+        Me.txtlname.Location = New System.Drawing.Point(52, 198)
+        Me.txtlname.Name = "txtlname"
+        Me.txtlname.Size = New System.Drawing.Size(88, 30)
+        Me.txtlname.TabIndex = 9
+        Me.txtlname.Text = "student"
         '
         'PictureBox1
         '
@@ -201,5 +201,5 @@ Partial Class student
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents label2 As System.Windows.Forms.Label
+    Friend WithEvents txtlname As System.Windows.Forms.Label
 End Class

@@ -38,7 +38,7 @@ Public Class register
             ' Set the next ID in TextBox1 (auto-generated)
             TextBox1.Text = (uid + 1).ToString()
         Catch ex As Exception
-            ' If there's an error (e.g. DB not connected), fallback to ID = 1
+            ' If there's an error fallback to ID = 1
             MessageBox.Show("Error generating ID: " & ex.Message)
             TextBox1.Text = "1"
         End Try

@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class student
+    Dim connection As String = "server=localhost;userid=root;password=;database=database_panel;port=3306"
     Dim homes As New home()
 
 
@@ -13,6 +14,20 @@ Public Class student
         Panel1.Width = 240
         Panel1.BackColor = Color.FromArgb(40, 40, 40)
 
+        Try
+            Dim conn As New MySqlConnection(connection)
+            conn.Open()
+
+            Dim cmdProfile As New MySqlCommand("SELECT * FROM account", conn)
+            Dim reader As MySqlDataReader = cmdProfile.ExecuteReader()
+
+            If reader.Read() Then
+                txtlname.Text = reader("name") & " " & reader("lastname")
+            End If
+            reader.Close()
+            conn.Close()
+        Catch ex As Exception
+        End Try
     End Sub
     'x button
     Private Sub form_closing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing

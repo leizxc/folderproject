@@ -270,6 +270,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property PF() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("PF", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property pfl_pic() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("pfl_pic", resourceCulture)
@@ -287,6 +294,13 @@ Namespace My.Resources
         Friend ReadOnly Property profile() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("profile", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property sosyal() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("sosyal", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -312,9 +326,16 @@ Namespace My.Resources
             End Get
         End Property
         
-        Friend ReadOnly Property user__1_() As System.Drawing.Bitmap
+        Friend ReadOnly Property user1() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("user (1)", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("user1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property wow() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("wow", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
