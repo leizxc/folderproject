@@ -125,4 +125,8 @@ Public Class student
     Private Sub Label2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
+
+    Private Sub txtlname_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtlname.Click
+
+    End Sub
 End Class

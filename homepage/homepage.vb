@@ -4,9 +4,10 @@ Imports System.Security.Cryptography
 
 Public Class Form
     ' MySQL connection setup
-    Dim connector As New MySqlConnection("server=localhost; userid=root; password=; database=database_panel")
+    Dim conn As New MySqlConnection("server=localhost; userid=root; password=; database=database_panel")
     Dim selectrole As String = ""
     Dim activebutton As Button = Nothing
+    Dim loginattempt As Integer = 0
 
     ' MD5 hashing function for password encryption
     Public Function md5fromstring(ByVal source As String) As String
@@ -44,8 +45,6 @@ Public Class Form
 
     ' Open password recovery form
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        Dim rec As New recover()
-        rec.Show()
     End Sub
 
     ' Login logic
@@ -59,16 +58,23 @@ Public Class Form
         End If
 
         Try
-            Dim connector As New MySqlConnection("server=localhost; userid=root; password=; database=database_panel")
-            connector.Open()
-
+            conn.Open()
             Dim query As String = "SELECT * FROM account WHERE role='" & selectrole & "' AND username='" & username & "' AND passwordusername='" & hashcode.md5fromstring(password) & "'"
-            Dim command As New MySqlCommand(query, connector)
+            Dim command As New MySqlCommand(query, conn)
             Dim reader As MySqlDataReader = command.ExecuteReader()
+
+            command.Parameters.AddWithValue("@role", selectrole)
+            command.Parameters.AddWithValue("@username", username)
+            command.Parameters.AddWithValue("passwordusername", md5fromstring(password))
+
+            If loginattempt >= 3 Then
+                MessageBox.Show("Your account is block because of too much attempt", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
 
             If reader.HasRows Then
                 reader.Read()
                 sessionlogin.loginrole = selectrole.ToUpper()
+                loginattempt = 0
 
                 If selectrole = "STUDENT" Then
                     student.Show()
@@ -82,6 +88,7 @@ Public Class Form
 
                 Me.Hide()
             Else
+                loginattempt += 1
                 MessageBox.Show("INVALID USERNAME OR PASSWORD OR ROLE", "INVALID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 TextBox1.Text = ""
                 TextBox2.Text = ""
@@ -94,7 +101,7 @@ Public Class Form
             End If
 
             reader.Close()
-            connector.Close()
+            conn.Close()
         Catch ex As Exception
             MessageBox.Show("ERROR: " & ex.Message)
         End Try
@@ -106,6 +113,8 @@ Public Class Form
         centerpanel()
         Me.KeyPreview = True
         TextBox2.UseSystemPasswordChar = False
+
+
     End Sub
 
     ' Re-center panel on form resize
