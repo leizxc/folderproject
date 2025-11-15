@@ -24,7 +24,7 @@ Public Class register
         Me.WindowState = FormWindowState.Maximized
 
         ' Hide password characters
-        TextBox6.UseSystemPasswordChar = True
+        pass.UseSystemPasswordChar = True
 
         ' Try to connect and get the latest ID from the account table
         Try
@@ -32,24 +32,29 @@ Public Class register
             conn.Open()
 
             ' Get the highest existing ID from the account table
-            Dim cmd As New MySqlCommand("SELECT IFNULL(MAX(id), 0) FROM account", conn)
+            Dim cmd As New MySqlCommand("SELECT IFNULL(MAX(account_id), 0) FROM account", conn)
             Dim uid As Integer = cmd.ExecuteScalar()
 
             ' Set the next ID in TextBox1 (auto-generated)
-            TextBox1.Text = (uid + 1).ToString()
+            id.Text = (uid + 1).ToString()
         Catch ex As Exception
             ' If there's an error fallback to ID = 1
             MessageBox.Show("Error generating ID: " & ex.Message)
-            TextBox1.Text = "1"
+            id.Text = "1"
         End Try
+        stat.Text = "ON"
+
+        coursepanel.Visible = False
+        subjectpanel.Visible = False
+
     End Sub
 
 
 
     Private Sub get_u_id()
-        Dim ad As New MySqlDataAdapter("select max (id)from account", conn)
+        Dim ad As New MySqlDataAdapter("select max (account_id)from account", conn)
         Dim ds As New System.Data.DataSet
-        TextBox1.Text = ds.Tables(0).Rows(0).Item("id") + 1
+        id.Text = ds.Tables(0).Rows(0).Item("account_id") + 1
     End Sub
 
     Private Sub register_Resize(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Resize
@@ -57,49 +62,16 @@ Public Class register
         Panel2.Top = (Me.ClientSize.Height - Panel2.Height) \ 2
     End Sub
 
-
-    Private Sub TextBox4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub Label3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub Label7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub TextBox8_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs)
-
-    End Sub
-
-    Private Sub TextBox20_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Me.Close()
         Form.Show()
-    End Sub
-
-    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
-
     End Sub
 
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim hashcode As register
         hashcode = New register()
         ' Validation
-        If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "" Or TextBox6.Text = "" Or TextBox7.Text = "" Or TextBox9.Text = "" Or TextBox10.Text = "" Or ComboBox1.SelectedIndex = -1 Then
+        If id.Text = "" Or ln.Text = "" Or fn.Text = "" Or mi.Text = "" Or un.Text = "" Or pass.Text = "" Or add.Text = "" Or secques.SelectedIndex = -1 Or sa.Text = "" Or role.SelectedIndex = -1 Or stat.Text = "" Then
 
             MessageBox.Show("Please fill in all fields!")
             Exit Sub
@@ -111,45 +83,39 @@ Public Class register
 
                 ' Check kung may existing username
                 Dim checkCmd As New MySqlCommand("SELECT COUNT(*) FROM account WHERE username=@username", conn)
-                checkCmd.Parameters.AddWithValue("@username", TextBox5.Text)
+                checkCmd.Parameters.AddWithValue("@username", un.Text)
                 Dim count As Integer = checkCmd.ExecuteScalar()
 
                 If count > 0 Then
                     MessageBox.Show("Username already exists!")
                 Else
                     ' Insert new account
-                    Dim insertCmd As New MySqlCommand("INSERT INTO account(id, lastname, name, middlename, username, passwordusername, email, role, secques, secans)  VALUES(@id, @lastname, @name, @middlename, @username, @passwordusername, @email, @role, @secques, @secans)", conn)
+                    Dim insertCmd As New MySqlCommand("INSERT INTO account(account_id, lastname, firstname, middlename, username, passwordusername, address, role, secque, secans, account_status, course, subject)  VALUES(@account_id, @lastname, @firstname, @middlename, @username, @passwordusername, @address, @role, @secque, @secans, 'ON', @course, @subject)", conn)
 
-                    insertCmd.Parameters.AddWithValue("@id", TextBox1.Text)
-                    insertCmd.Parameters.AddWithValue("@lastname", TextBox2.Text)
-                    insertCmd.Parameters.AddWithValue("@name", TextBox3.Text)
-                    insertCmd.Parameters.AddWithValue("@middlename", TextBox4.Text)
-                    insertCmd.Parameters.AddWithValue("@username", TextBox5.Text)
-                    insertCmd.Parameters.AddWithValue("@passwordusername", hashcode.md5fromstring(TextBox6.Text))
-                    insertCmd.Parameters.AddWithValue("@email", TextBox7.Text)
-                    insertCmd.Parameters.AddWithValue("@role", ComboBox1.SelectedItem.ToString().ToUpper()) ' naka-uppercase
-                    insertCmd.Parameters.AddWithValue("@secques", TextBox9.Text)
-                    insertCmd.Parameters.AddWithValue("@secans", TextBox10.Text)
+                    insertCmd.Parameters.AddWithValue("@account_id", id.Text)
+                    insertCmd.Parameters.AddWithValue("@lastname", ln.Text)
+                    insertCmd.Parameters.AddWithValue("@firstname", fn.Text)
+                    insertCmd.Parameters.AddWithValue("@middlename", mi.Text)
+                    insertCmd.Parameters.AddWithValue("@username", un.Text)
+                    insertCmd.Parameters.AddWithValue("@passwordusername", hashcode.md5fromstring(pass.Text))
+                    insertCmd.Parameters.AddWithValue("@address", add.Text)
+                    insertCmd.Parameters.AddWithValue("@role", role.SelectedItem.ToString())
+                    insertCmd.Parameters.AddWithValue("@secque", secques.SelectedItem.ToString())
+                    insertCmd.Parameters.AddWithValue("@secans", sa.Text)
+                    insertCmd.Parameters.AddWithValue("@account_status", "ON")
+                    insertCmd.Parameters.AddWithValue("@course", course.Text)
+                    insertCmd.Parameters.AddWithValue("@subject", subject.Text)
+
 
                     insertCmd.ExecuteNonQuery()
 
                     MessageBox.Show("Registration Successful!")
 
-                    ' Clear all fields
-                    TextBox1.Clear()
-                    TextBox2.Clear()
-                    TextBox3.Clear()
-                    TextBox4.Clear()
-                    TextBox5.Clear()
-                    TextBox6.Clear()
-                    TextBox7.Clear()
-                    TextBox9.Clear()
-                    TextBox10.Clear()
-                    ComboBox1.SelectedIndex = -1
-
                     ' Example: balik sa login form (palitan depende sa form name mo)
-                    Me.Close()
+                    Me.Hide()
                     Form.Show()
+
+
                 End If
             End Using
         Catch ex As Exception
@@ -157,44 +123,58 @@ Public Class register
         End Try
     End Sub
 
-    Private Sub Panel1_Paint_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub Label1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub Label3_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label3.Click
-
-    End Sub
-
-    Private Sub Label7_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label7.Click
-
-    End Sub
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles role.SelectedIndexChanged
+        Dim selectrole As String = role.SelectedItem.ToString
+        coursepanel.Visible = False
+        subjectpanel.Visible = False
+        If selectrole = "STUDENT" Then
+            coursepanel.Visible = True
+        ElseIf selectrole = "PROFESSOR" Then
+            subjectpanel.Visible = True
 
 
-    Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label10.Click
-
-    End Sub
-
-    Private Sub Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel2.Paint
-
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
-
+        End If
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked Then
-            TextBox6.UseSystemPasswordChar = False
+            pass.UseSystemPasswordChar = False
         Else
-            TextBox6.UseSystemPasswordChar = True
+            pass.UseSystemPasswordChar = True
         End If
     End Sub
 
-    Private Sub TextBox6_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox6.TextChanged
+    Private Sub ComboBox1_SelectedIndexChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles course.SelectedIndexChanged
+        If course.SelectedIndex <> -1 Then
+
+        End If
+        ' Optional: show confirmation
+        MessageBox.Show("You selected: " & course.SelectedItem.ToString(), "Course Selected", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        ' I-hide yung panel
+        coursepanel.Visible = False
+    End Sub
+
+    Private Sub subject_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles subject.SelectedIndexChanged
+        If subject.SelectedIndex <> -1 Then
+
+        End If
+        ' Optional: show confirmation
+        MessageBox.Show("You selected: " & subject.SelectedItem.ToString(), "Subject Selected(", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        ' I-hide yung panel
+        subjectpanel.Visible = False
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        subjectpanel.Visible = False
+    End Sub
+
+    Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        coursepanel.Visible = False
+    End Sub
+
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class

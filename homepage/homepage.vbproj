@@ -126,17 +126,17 @@
     <Compile Include="professor\classes.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="student\profilestudent.designer.vb">
-      <DependentUpon>profilestudent.vb</DependentUpon>
-    </Compile>
-    <Compile Include="student\profilestudent.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="register\register.designer.vb">
       <DependentUpon>register.vb</DependentUpon>
     </Compile>
     <Compile Include="register\register.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student\profilestudent.designer.vb">
+      <DependentUpon>profilestudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student\profilestudent.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="admin\Registration of User.designer.vb">
       <DependentUpon>Registration of User.vb</DependentUpon>
@@ -486,6 +486,10 @@
       <DependentUpon>classes.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="register\register.resx">
+      <DependentUpon>register.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="student\profilestudent.resx">
       <DependentUpon>profilestudent.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -502,10 +506,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cashier\Prof_Sal.resx">
       <DependentUpon>Prof_Sal.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="register\register.resx">
-      <DependentUpon>register.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="admin\Registration of User.resx">
