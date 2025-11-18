@@ -144,6 +144,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property e5a2e0fa_7264_46c0_afdb_54689fb8bc82() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("e5a2e0fa-7264-46c0-afdb-54689fb8bc82", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property event1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("event1", resourceCulture)

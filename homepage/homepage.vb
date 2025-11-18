@@ -30,7 +30,7 @@ Public Class Form
     End Sub
 
     ' Role selection: PROFESSOR
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         selectrole = "PROFESSOR"
         HighlightRole(Button2)
     End Sub
@@ -141,7 +141,8 @@ Public Class Form
         centerpanel()
         Me.KeyPreview = True
         TextBox2.UseSystemPasswordChar = False
-
+        TextBox2.UseSystemPasswordChar = False
+        TextBox2.PasswordChar = ChrW(&H25CF)
 
     End Sub
 

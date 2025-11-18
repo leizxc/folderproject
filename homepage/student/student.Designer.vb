@@ -58,11 +58,11 @@ Partial Class student
         '
         Me.txtlname.AutoSize = True
         Me.txtlname.BackColor = System.Drawing.Color.Transparent
-        Me.txtlname.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtlname.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtlname.ForeColor = System.Drawing.Color.White
         Me.txtlname.Location = New System.Drawing.Point(52, 198)
         Me.txtlname.Name = "txtlname"
-        Me.txtlname.Size = New System.Drawing.Size(88, 30)
+        Me.txtlname.Size = New System.Drawing.Size(102, 32)
         Me.txtlname.TabIndex = 9
         Me.txtlname.Text = "student"
         '
