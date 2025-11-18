@@ -32,7 +32,7 @@ Public Class register
             conn.Open()
 
             ' Get the highest existing ID from the account table
-            Dim cmd As New MySqlCommand("SELECT IFNULL(MAX(account_id), 0) FROM account", conn)
+            Dim cmd As New MySqlCommand("SELECT IFNULL(MAX(id), 0) FROM account", conn)
             Dim uid As Integer = cmd.ExecuteScalar()
 
             ' Set the next ID in TextBox1 (auto-generated)
@@ -42,7 +42,8 @@ Public Class register
             MessageBox.Show("Error generating ID: " & ex.Message)
             id.Text = "1"
         End Try
-        stat.Text = "ON"
+
+        stat.Text = "OFF"
 
         coursepanel.Visible = False
         subjectpanel.Visible = False
@@ -52,9 +53,9 @@ Public Class register
 
 
     Private Sub get_u_id()
-        Dim ad As New MySqlDataAdapter("select max (account_id)from account", conn)
+        Dim ad As New MySqlDataAdapter("select max (id)from account", conn)
         Dim ds As New System.Data.DataSet
-        id.Text = ds.Tables(0).Rows(0).Item("account_id") + 1
+        id.Text = ds.Tables(0).Rows(0).Item("id") + 1
     End Sub
 
     Private Sub register_Resize(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Resize
@@ -71,7 +72,7 @@ Public Class register
         Dim hashcode As register
         hashcode = New register()
         ' Validation
-        If id.Text = "" Or ln.Text = "" Or fn.Text = "" Or mi.Text = "" Or un.Text = "" Or pass.Text = "" Or add.Text = "" Or secques.SelectedIndex = -1 Or sa.Text = "" Or role.SelectedIndex = -1 Or stat.Text = "" Then
+        If id.Text = "" Or ln.Text = "" Or fn.Text = "" Or mi.Text = "" Or un.Text = "" Or pass.Text = "" Or add.Text = "" Or secques.SelectedIndex = -1 Or sa.Text = "" Or role.SelectedIndex = -1 Or stat.Text = "" Or ct.Text = "" Or age.Text = "" Then
 
             MessageBox.Show("Please fill in all fields!")
             Exit Sub
@@ -90,26 +91,28 @@ Public Class register
                     MessageBox.Show("Username already exists!")
                 Else
                     ' Insert new account
-                    Dim insertCmd As New MySqlCommand("INSERT INTO account(account_id, lastname, firstname, middlename, username, passwordusername, address, role, secque, secans, account_status, course, subject)  VALUES(@account_id, @lastname, @firstname, @middlename, @username, @passwordusername, @address, @role, @secque, @secans, 'ON', @course, @subject)", conn)
+                    Dim insertCmd As New MySqlCommand("INSERT INTO account(id, lastname, firstname, middlename, username, passwordusername, address, role, secques, secans, acc_status, course, subject, age, contact)  VALUES(@id, @lastname, @name, @middlename, @username, @passwordusername, @address, @role, @secques, @secans, 'OFF', @course, @subject, @age, @contact)", conn)
 
-                    insertCmd.Parameters.AddWithValue("@account_id", id.Text)
+                    insertCmd.Parameters.AddWithValue("@id", id.Text)
                     insertCmd.Parameters.AddWithValue("@lastname", ln.Text)
-                    insertCmd.Parameters.AddWithValue("@firstname", fn.Text)
+                    insertCmd.Parameters.AddWithValue("@name", fn.Text)
                     insertCmd.Parameters.AddWithValue("@middlename", mi.Text)
                     insertCmd.Parameters.AddWithValue("@username", un.Text)
                     insertCmd.Parameters.AddWithValue("@passwordusername", hashcode.md5fromstring(pass.Text))
                     insertCmd.Parameters.AddWithValue("@address", add.Text)
                     insertCmd.Parameters.AddWithValue("@role", role.SelectedItem.ToString())
-                    insertCmd.Parameters.AddWithValue("@secque", secques.SelectedItem.ToString())
+                    insertCmd.Parameters.AddWithValue("@secques", secques.SelectedItem.ToString())
                     insertCmd.Parameters.AddWithValue("@secans", sa.Text)
-                    insertCmd.Parameters.AddWithValue("@account_status", "ON")
+                    insertCmd.Parameters.AddWithValue("@acc_status", "ON")
                     insertCmd.Parameters.AddWithValue("@course", course.Text)
                     insertCmd.Parameters.AddWithValue("@subject", subject.Text)
-
+                    insertCmd.Parameters.AddWithValue("@age", age.Text)
+                    insertCmd.Parameters.AddWithValue("@contact", ct.Text)
 
                     insertCmd.ExecuteNonQuery()
 
-                    MessageBox.Show("Registration Successful!")
+                    MessageBox.Show("Registration submitted! Your account is currently OFF and awaiting admin approval.", "Registration Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
 
                     ' Example: balik sa login form (palitan depende sa form name mo)
                     Me.Hide()
@@ -175,6 +178,26 @@ Public Class register
     End Sub
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub Label15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ct.TextChanged
+
+    End Sub
+
+    Private Sub Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label10.Click
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles age.TextChanged
 
     End Sub
 End Class

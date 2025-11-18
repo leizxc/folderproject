@@ -33,6 +33,10 @@ Partial Class register
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel
         Me.course = New System.Windows.Forms.ComboBox
         Me.Label12 = New System.Windows.Forms.Label
+        Me.Label16 = New System.Windows.Forms.Label
+        Me.ct = New System.Windows.Forms.TextBox
+        Me.Label15 = New System.Windows.Forms.Label
+        Me.age = New System.Windows.Forms.TextBox
         Me.stat = New System.Windows.Forms.TextBox
         Me.Label11 = New System.Windows.Forms.Label
         Me.secques = New System.Windows.Forms.ComboBox
@@ -85,6 +89,10 @@ Partial Class register
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel2.Controls.Add(Me.subjectpanel)
         Me.Panel2.Controls.Add(Me.coursepanel)
+        Me.Panel2.Controls.Add(Me.Label16)
+        Me.Panel2.Controls.Add(Me.ct)
+        Me.Panel2.Controls.Add(Me.Label15)
+        Me.Panel2.Controls.Add(Me.age)
         Me.Panel2.Controls.Add(Me.stat)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.secques)
@@ -124,7 +132,7 @@ Partial Class register
         Me.subjectpanel.Controls.Add(Me.LinkLabel1)
         Me.subjectpanel.Controls.Add(Me.subject)
         Me.subjectpanel.Controls.Add(Me.Label13)
-        Me.subjectpanel.Location = New System.Drawing.Point(42, 335)
+        Me.subjectpanel.Location = New System.Drawing.Point(37, 436)
         Me.subjectpanel.Name = "subjectpanel"
         Me.subjectpanel.Size = New System.Drawing.Size(290, 107)
         Me.subjectpanel.TabIndex = 27
@@ -132,11 +140,11 @@ Partial Class register
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Uighur", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.LinkColor = System.Drawing.Color.Red
         Me.LinkLabel1.Location = New System.Drawing.Point(266, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(27, 25)
+        Me.LinkLabel1.Size = New System.Drawing.Size(22, 26)
         Me.LinkLabel1.TabIndex = 4
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "X" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
@@ -168,7 +176,7 @@ Partial Class register
         Me.coursepanel.Controls.Add(Me.LinkLabel2)
         Me.coursepanel.Controls.Add(Me.course)
         Me.coursepanel.Controls.Add(Me.Label12)
-        Me.coursepanel.Location = New System.Drawing.Point(79, 339)
+        Me.coursepanel.Location = New System.Drawing.Point(79, 436)
         Me.coursepanel.Name = "coursepanel"
         Me.coursepanel.Size = New System.Drawing.Size(200, 100)
         Me.coursepanel.TabIndex = 0
@@ -176,11 +184,11 @@ Partial Class register
         'LinkLabel2
         '
         Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Uighur", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel2.LinkColor = System.Drawing.Color.Red
         Me.LinkLabel2.Location = New System.Drawing.Point(176, 0)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(27, 25)
+        Me.LinkLabel2.Size = New System.Drawing.Size(22, 26)
         Me.LinkLabel2.TabIndex = 5
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "X" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
@@ -205,6 +213,38 @@ Partial Class register
         Me.Label12.Text = "PLEASE SELECT COURSE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(50, 362)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(47, 13)
+        Me.Label16.TabIndex = 30
+        Me.Label16.Text = "Contact:"
+        '
+        'ct
+        '
+        Me.ct.Location = New System.Drawing.Point(106, 355)
+        Me.ct.Name = "ct"
+        Me.ct.Size = New System.Drawing.Size(146, 20)
+        Me.ct.TabIndex = 29
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(60, 336)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(29, 13)
+        Me.Label15.TabIndex = 28
+        Me.Label15.Text = "Age:"
+        '
+        'age
+        '
+        Me.age.Location = New System.Drawing.Point(106, 329)
+        Me.age.Name = "age"
+        Me.age.Size = New System.Drawing.Size(146, 20)
+        Me.age.TabIndex = 27
+        '
         'stat
         '
         Me.stat.Enabled = False
@@ -216,7 +256,7 @@ Partial Class register
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(60, 206)
+        Me.Label11.Location = New System.Drawing.Point(60, 203)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(40, 13)
         Me.Label11.TabIndex = 25
@@ -226,7 +266,7 @@ Partial Class register
         '
         Me.secques.FormattingEnabled = True
         Me.secques.Items.AddRange(New Object() {"Favorite Food", "Favorite Color", "Favorite Hobby", "Favorite Sport", "Favorite Book"})
-        Me.secques.Location = New System.Drawing.Point(106, 411)
+        Me.secques.Location = New System.Drawing.Point(106, 454)
         Me.secques.Name = "secques"
         Me.secques.Size = New System.Drawing.Size(146, 21)
         Me.secques.TabIndex = 24
@@ -234,7 +274,7 @@ Partial Class register
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(256, 335)
+        Me.CheckBox1.Location = New System.Drawing.Point(256, 407)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(53, 17)
         Me.CheckBox1.TabIndex = 23
@@ -244,8 +284,8 @@ Partial Class register
         'role
         '
         Me.role.FormattingEnabled = True
-        Me.role.Items.AddRange(New Object() {"STUDENT", "PROFESSOR", "CASHIER"})
-        Me.role.Location = New System.Drawing.Point(106, 386)
+        Me.role.Items.AddRange(New Object() {"STUDENT", "PROFESSOR", "CASHIER", "ADMIN"})
+        Me.role.Location = New System.Drawing.Point(106, 429)
         Me.role.Name = "role"
         Me.role.Size = New System.Drawing.Size(144, 21)
         Me.role.TabIndex = 22
@@ -264,7 +304,7 @@ Partial Class register
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(11, 445)
+        Me.Label10.Location = New System.Drawing.Point(14, 488)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(86, 13)
         Me.Label10.TabIndex = 20
@@ -272,7 +312,7 @@ Partial Class register
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(143, 507)
+        Me.Button2.Location = New System.Drawing.Point(143, 532)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(73, 20)
         Me.Button2.TabIndex = 21
@@ -282,7 +322,7 @@ Partial Class register
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(4, 419)
+        Me.Label9.Location = New System.Drawing.Point(7, 462)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(93, 13)
         Me.Label9.TabIndex = 19
@@ -303,7 +343,7 @@ Partial Class register
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(65, 393)
+        Me.Label8.Location = New System.Drawing.Point(65, 436)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(32, 13)
         Me.Label8.TabIndex = 18
@@ -321,16 +361,16 @@ Partial Class register
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(62, 367)
+        Me.Label7.Location = New System.Drawing.Point(50, 309)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(45, 13)
+        Me.Label7.Size = New System.Drawing.Size(48, 13)
         Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Address"
+        Me.Label7.Text = "Address:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(76, 180)
+        Me.Label1.Location = New System.Drawing.Point(76, 176)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(21, 13)
         Me.Label1.TabIndex = 11
@@ -339,7 +379,7 @@ Partial Class register
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(41, 339)
+        Me.Label6.Location = New System.Drawing.Point(41, 411)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(56, 13)
         Me.Label6.TabIndex = 16
@@ -354,7 +394,7 @@ Partial Class register
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(143, 481)
+        Me.Button1.Location = New System.Drawing.Point(143, 510)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(73, 20)
         Me.Button1.TabIndex = 10
@@ -364,7 +404,7 @@ Partial Class register
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(41, 232)
+        Me.Label2.Location = New System.Drawing.Point(41, 230)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 13)
         Me.Label2.TabIndex = 12
@@ -380,7 +420,7 @@ Partial Class register
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(34, 313)
+        Me.Label5.Location = New System.Drawing.Point(34, 385)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(63, 13)
         Me.Label5.TabIndex = 15
@@ -388,7 +428,7 @@ Partial Class register
         '
         'sa
         '
-        Me.sa.Location = New System.Drawing.Point(106, 438)
+        Me.sa.Location = New System.Drawing.Point(106, 481)
         Me.sa.Name = "sa"
         Me.sa.Size = New System.Drawing.Size(146, 20)
         Me.sa.TabIndex = 9
@@ -396,7 +436,7 @@ Partial Class register
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(39, 254)
+        Me.Label3.Location = New System.Drawing.Point(40, 256)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(60, 13)
         Me.Label3.TabIndex = 13
@@ -405,7 +445,7 @@ Partial Class register
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(32, 284)
+        Me.Label4.Location = New System.Drawing.Point(34, 282)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(68, 13)
         Me.Label4.TabIndex = 14
@@ -420,21 +460,21 @@ Partial Class register
         '
         'add
         '
-        Me.add.Location = New System.Drawing.Point(106, 360)
+        Me.add.Location = New System.Drawing.Point(104, 302)
         Me.add.Name = "add"
         Me.add.Size = New System.Drawing.Size(146, 20)
         Me.add.TabIndex = 6
         '
         'un
         '
-        Me.un.Location = New System.Drawing.Point(106, 306)
+        Me.un.Location = New System.Drawing.Point(106, 378)
         Me.un.Name = "un"
         Me.un.Size = New System.Drawing.Size(146, 20)
         Me.un.TabIndex = 4
         '
         'pass
         '
-        Me.pass.Location = New System.Drawing.Point(106, 332)
+        Me.pass.Location = New System.Drawing.Point(106, 404)
         Me.pass.Name = "pass"
         Me.pass.Size = New System.Drawing.Size(146, 20)
         Me.pass.TabIndex = 5
@@ -499,4 +539,8 @@ Partial Class register
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents ct As System.Windows.Forms.TextBox
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents age As System.Windows.Forms.TextBox
 End Class

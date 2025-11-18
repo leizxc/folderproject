@@ -7,7 +7,6 @@ Public Class Form
     Dim conn As New MySqlConnection("server=localhost; userid=root; password=; database=database_panel")
     Dim selectrole As String = ""
     Dim activebutton As Button = Nothing
-    Dim loginattempt As Integer = 0
 
     ' MD5 hashing function for password encryption
     Public Function md5fromstring(ByVal source As String) As String
@@ -49,32 +48,52 @@ Public Class Form
 
     ' Login logic
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        Dim hashcode As Form = New Form()
+        Dim hashcode As Form = New Form
         Dim username As String = TextBox1.Text.Trim()
         Dim password As String = TextBox2.Text.Trim()
 
         If username = "" Or password = "" Or selectrole = "" Then
             MessageBox.Show("PLEASE INPUT YOUR ACCOUNT AND SELECT ROLE!!")
+            Refreshme()
+            Exit Sub
         End If
 
         Try
             conn.Open()
-            Dim query As String = "SELECT * FROM account WHERE role='" & selectrole & "' AND username='" & username & "' AND passwordusername='" & hashcode.md5fromstring(password) & "'"
-            Dim command As New MySqlCommand(query, conn)
-            Dim reader As MySqlDataReader = command.ExecuteReader()
+            Dim checkStatusQuery As String = "SELECT acc_status FROM account WHERE username=@username AND passwordusername=@password"
+            Dim statusCmd As New MySqlCommand(checkStatusQuery, conn)
+            statusCmd.Parameters.AddWithValue("@username", username)
+            statusCmd.Parameters.AddWithValue("@password", md5fromstring(password))
+            Dim status As Object = statusCmd.ExecuteScalar()
 
+            ' If no account found
+            If status Is Nothing Then
+                MessageBox.Show("Invalid username or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Refreshme()
+                conn.Close()
+                Exit Sub
+            End If
+
+            ' If account is OFF
+            If status.ToString().ToUpper() = "OFF" Then
+                MessageBox.Show("Your account is currently OFF. Please wait for admin approval.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Refreshme()
+                conn.Close()
+                Exit Sub
+            End If
+
+            ' Continue login if status = ON
+            Dim query As String = "SELECT * FROM account WHERE role=@role AND username=@username AND passwordusername=@password"
+            Dim command As New MySqlCommand(query, conn)
             command.Parameters.AddWithValue("@role", selectrole)
             command.Parameters.AddWithValue("@username", username)
-            command.Parameters.AddWithValue("passwordusername", md5fromstring(password))
-
-            If loginattempt >= 3 Then
-                MessageBox.Show("Your account is block because of too much attempt", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
+            command.Parameters.AddWithValue("@password", md5fromstring(password))
+            Dim reader As MySqlDataReader = command.ExecuteReader()
 
             If reader.HasRows Then
                 reader.Read()
+                sessionlogin.loginuser = username
                 sessionlogin.loginrole = selectrole.ToUpper()
-                loginattempt = 0
 
                 If selectrole = "STUDENT" Then
                     student.Show()
@@ -87,25 +106,34 @@ Public Class Form
                 End If
 
                 Me.Hide()
+
             Else
-                loginattempt += 1
                 MessageBox.Show("INVALID USERNAME OR PASSWORD OR ROLE", "INVALID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                TextBox1.Text = ""
-                TextBox2.Text = ""
-                selectrole = ""
-                If activebutton IsNot Nothing Then
-                    activebutton.BackColor = SystemColors.Control
-                    activebutton = Nothing
-                End If
-                TextBox1.Focus()
+                Refreshme()
             End If
 
             reader.Close()
             conn.Close()
+
         Catch ex As Exception
             MessageBox.Show("ERROR: " & ex.Message)
         End Try
     End Sub
+
+    Private Sub Refreshme()
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        selectrole = ""
+
+        If activebutton IsNot Nothing Then
+            activebutton.BackColor = SystemColors.Control
+            activebutton = Nothing
+        End If
+
+        TextBox1.Focus()
+    End Sub
+
+
 
     ' Form initialization
     Private Sub Form_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

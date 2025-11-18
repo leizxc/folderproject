@@ -89,7 +89,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin\admin.Designer.vb">
+    <Compile Include="admin\admin.designer.vb">
       <DependentUpon>admin.vb</DependentUpon>
     </Compile>
     <Compile Include="admin\admin.vb">
@@ -113,6 +113,12 @@
     <Compile Include="cashier\Prof_Sal.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="homepage.designer.vb">
+      <DependentUpon>homepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="homepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="module\connection.vb" />
     <Compile Include="professor\prof.designer.vb">
       <DependentUpon>prof.vb</DependentUpon>
@@ -132,28 +138,28 @@
     <Compile Include="register\register.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="student\profilestudent.designer.vb">
-      <DependentUpon>profilestudent.vb</DependentUpon>
-    </Compile>
-    <Compile Include="student\profilestudent.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="admin\Registration of User.designer.vb">
       <DependentUpon>Registration of User.vb</DependentUpon>
     </Compile>
     <Compile Include="admin\Registration of User.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="admin\studentlist.designer.vb">
+      <DependentUpon>studentlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\studentlist.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="student\profilestudent.designer.vb">
+      <DependentUpon>profilestudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student\profilestudent.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="cashier\students_acc.designer.vb">
       <DependentUpon>students_acc.vb</DependentUpon>
     </Compile>
     <Compile Include="cashier\students_acc.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="admin\studentlist.Designer.vb">
-      <DependentUpon>studentlist.vb</DependentUpon>
-    </Compile>
-    <Compile Include="admin\studentlist.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="professor\SC_BSCE1.designer.vb">
@@ -283,13 +289,6 @@
     <Compile Include="cashier\cashier.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="homepage.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="homepage.Designer.vb">
-      <DependentUpon>homepage.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -315,12 +314,6 @@
       <DependentUpon>viewgrade.vb</DependentUpon>
     </Compile>
     <Compile Include="student\viewgrade.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="admin\Unlock Account.designer.vb">
-      <DependentUpon>Unlock Account.vb</DependentUpon>
-    </Compile>
-    <Compile Include="admin\Unlock Account.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="cashier\updatecas.designer.vb">
@@ -456,6 +449,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="module\variable.vb" />
+    <Compile Include="admin\Unlock Account.designer.vb">
+      <DependentUpon>Unlock Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Unlock Account.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="admin\admin.resx">
@@ -466,16 +465,16 @@
       <DependentUpon>Backup_Restore.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="admin\studentlist.resx">
-      <DependentUpon>studentlist.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="cashier\cashier.resx">
       <DependentUpon>cashier.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="cashier\Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homepage.resx">
+      <DependentUpon>homepage.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="professor\prof.resx">
@@ -490,12 +489,16 @@
       <DependentUpon>register.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="student\profilestudent.resx">
-      <DependentUpon>profilestudent.vb</DependentUpon>
+    <EmbeddedResource Include="admin\Registration of User.resx">
+      <DependentUpon>Registration of User.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="homepage.resx">
-      <DependentUpon>homepage.vb</DependentUpon>
+    <EmbeddedResource Include="admin\studentlist.resx">
+      <DependentUpon>studentlist.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student\profilestudent.resx">
+      <DependentUpon>profilestudent.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -506,10 +509,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cashier\Prof_Sal.resx">
       <DependentUpon>Prof_Sal.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="admin\Registration of User.resx">
-      <DependentUpon>Registration of User.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="cashier\students_acc.resx">
@@ -578,10 +577,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="student\viewgrade.resx">
       <DependentUpon>viewgrade.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="admin\Unlock Account.resx">
-      <DependentUpon>Unlock Account.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="cashier\updatecas.resx">
@@ -670,6 +665,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="professor\UC_BSIT4TH.resx">
       <DependentUpon>UC_BSIT4TH.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Unlock Account.resx">
+      <DependentUpon>Unlock Account.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

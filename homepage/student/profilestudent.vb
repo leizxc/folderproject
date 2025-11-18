@@ -9,21 +9,22 @@ Public Class profilestudent
             Dim conn As New MySqlConnection(connection)
             conn.Open()
 
-            Dim cmdProfile As New MySqlCommand("SELECT * FROM stud_prfl", conn)
+            Dim cmdProfile As New MySqlCommand("SELECT * FROM stud_prfl WHERE username=@username", conn)
+            cmdProfile.Parameters.AddWithValue("@username", sessionlogin.loginuser)
             Dim reader As MySqlDataReader = cmdProfile.ExecuteReader()
 
             If reader.Read() Then
                 txtid.Text = reader("id")
-                txtname.Text = reader("frstname")
-                txtlastname.Text = reader("lstname")
-                txtmiddlename.Text = reader("mname")
+                txtname.Text = reader("firstname")
+                txtlastname.Text = reader("lastname")
+                txtmiddlename.Text = reader("middlename")
                 txtage.Text = reader("age")
-                txtgender.Text = reader("gender")
-                txtbirth.Text = reader("birthday")
-                txtadd.Text = reader("full_address")
-                txtcontact.Text = reader("contact_num")
+
+
+                txtadd.Text = reader("address")
+                txtcontact.Text = reader("contact")
                 txtcourse.Text = reader("course")
-                txtstatus.Text = reader("status")
+                txtstatus.Text = reader("acc_status")
             End If
             reader.Close()
             conn.Close()

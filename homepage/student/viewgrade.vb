@@ -17,4 +17,20 @@ Public Class viewgrade
         TableLayoutPanel1.Visible = True
 
     End Sub
+
+    Private Sub Label14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles code2.Click
+
+    End Sub
+
+    Private Sub Label18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles subject4.Click
+
+    End Sub
+
+    Private Sub Label18_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles unit5.Click
+
+    End Sub
+
+    Private Sub Label32_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles remarks5.Click
+
+    End Sub
 End Class

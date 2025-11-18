@@ -18,15 +18,20 @@ Public Class student
             Dim conn As New MySqlConnection(connection)
             conn.Open()
 
-            Dim cmdProfile As New MySqlCommand("SELECT * FROM account", conn)
+            ' Filter by current username
+            Dim cmdProfile As New MySqlCommand("SELECT firstname,lastname FROM account WHERE username=@username", conn)
+            cmdProfile.Parameters.AddWithValue("@username", sessionlogin.loginuser)
             Dim reader As MySqlDataReader = cmdProfile.ExecuteReader()
 
             If reader.Read() Then
-                txtlname.Text = reader("name") & " " & reader("lastname")
+                txtlname.Text = reader("firstname") & " " & reader("lastname")
             End If
+
             reader.Close()
             conn.Close()
         Catch ex As Exception
+            MessageBox.Show("ERROR: " & ex.Message)
+
         End Try
     End Sub
     'x button
