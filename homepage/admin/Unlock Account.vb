@@ -39,7 +39,7 @@ Public Class Unlock_Account
             Using connn As New MySqlConnection(connString)
                 connn.Open()
 
-                Dim query As String = "SELECT * FROM  unlock_request"
+                Dim query As String = "SELECT lastname, firstname, middlename, username,role,acc_status, attempt_count from account"
                 Dim adapter As New MySqlDataAdapter(query, connn)
                 Dim table As New DataTable()
 

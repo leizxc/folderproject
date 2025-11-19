@@ -44,6 +44,9 @@ Public Class Form
 
     ' Open password recovery form
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Dim recover As New recover()
+        recover.Show()
+        Me.Hide()
     End Sub
 
     ' Login logic
@@ -65,6 +68,27 @@ Public Class Form
             statusCmd.Parameters.AddWithValue("@username", username)
             statusCmd.Parameters.AddWithValue("@password", md5fromstring(password))
             Dim status As Object = statusCmd.ExecuteScalar()
+
+            Dim updateattempt As String = "UPDATE account SET attempt_count = attempt_count + 1 where username= @username"
+            Dim updatecmd As New MySqlCommand(updateattempt, conn)
+            updatecmd.Parameters.AddWithValue("@username", username)
+            updatecmd.ExecuteNonQuery()
+
+            Dim attemptcount As String = "SELECT attempt_count FROM account WHERE username = @username"
+            Dim attemptcmd As New MySqlCommand(attemptcount, conn)
+            attemptcmd.Parameters.AddWithValue("@username", username)
+            Dim attempt As Integer = Convert.ToInt32(attemptcmd.ExecuteScalar())
+
+
+            If attempt >= 5 Then
+                Dim block As String = "UPDATE account SET acc_status = 'OFF' WHERE username = @username"
+                Dim blockcmd As New MySqlCommand(block, conn)
+                blockcmd.Parameters.AddWithValue("@username", username)
+                blockcmd.ExecuteNonQuery()
+
+
+            End If
+
 
             ' If no account found
             If status Is Nothing Then
@@ -90,10 +114,19 @@ Public Class Form
             command.Parameters.AddWithValue("@password", md5fromstring(password))
             Dim reader As MySqlDataReader = command.ExecuteReader()
 
+
             If reader.HasRows Then
                 reader.Read()
                 sessionlogin.loginuser = username
                 sessionlogin.loginrole = selectrole.ToUpper()
+                reader.Close()
+
+
+                Dim reset As String = "UPDATE account SET attempt_count = 0 where username = @username"
+                Dim resetcmd As New MySqlCommand(reset, conn)
+                resetcmd.Parameters.AddWithValue("@username", username)
+                resetcmd.ExecuteNonQuery()
+
 
                 If selectrole = "STUDENT" Then
                     student.Show()
@@ -106,7 +139,6 @@ Public Class Form
                 End If
 
                 Me.Hide()
-
             Else
                 MessageBox.Show("INVALID USERNAME OR PASSWORD OR ROLE", "INVALID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Refreshme()

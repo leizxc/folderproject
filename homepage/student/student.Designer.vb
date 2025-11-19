@@ -49,9 +49,9 @@ Partial Class student
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Location = New System.Drawing.Point(27, 70)
+        Me.Panel1.Location = New System.Drawing.Point(12, 70)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(190, 734)
+        Me.Panel1.Size = New System.Drawing.Size(205, 734)
         Me.Panel1.TabIndex = 0
         '
         'txtlname
@@ -60,7 +60,7 @@ Partial Class student
         Me.txtlname.BackColor = System.Drawing.Color.Transparent
         Me.txtlname.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtlname.ForeColor = System.Drawing.Color.White
-        Me.txtlname.Location = New System.Drawing.Point(52, 198)
+        Me.txtlname.Location = New System.Drawing.Point(28, 191)
         Me.txtlname.Name = "txtlname"
         Me.txtlname.Size = New System.Drawing.Size(102, 32)
         Me.txtlname.TabIndex = 9
@@ -69,7 +69,7 @@ Partial Class student
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.homepage.My.Resources.Resources.profile
-        Me.PictureBox1.Location = New System.Drawing.Point(34, 29)
+        Me.PictureBox1.Location = New System.Drawing.Point(20, 23)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(146, 146)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage

@@ -61,7 +61,6 @@ C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.classes.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Resources.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Prof_Sal.resources
-C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.register.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Registration_of_User.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.students_acc.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.SC_BSCE1.resources
@@ -112,3 +111,6 @@ C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.xml
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.pdb
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.Form.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.recover.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.ResetPassword.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.register.resources

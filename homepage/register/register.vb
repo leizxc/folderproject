@@ -72,7 +72,7 @@ Public Class register
         Dim hashcode As register
         hashcode = New register()
         ' Validation
-        If id.Text = "" Or ln.Text = "" Or fn.Text = "" Or mi.Text = "" Or un.Text = "" Or pass.Text = "" Or add.Text = "" Or secques.SelectedIndex = -1 Or sa.Text = "" Or role.SelectedIndex = -1 Or stat.Text = "" Or ct.Text = "" Or age.Text = "" Then
+        If id.Text = "" Or ln.Text = "" Or fn.Text = "" Or mi.Text = "" Or un.Text = "" Or pass.Text = "" Or add.Text = "" Or secques.SelectedIndex = -1 Or sa.Text = "" Or role.SelectedIndex = -1 Or stat.Text = "" Or ct.Text = "" Or age.Text = "" Or bd.Text = "" Or gen.SelectedIndex = -1 Then
 
             MessageBox.Show("Please fill in all fields!")
             Exit Sub
@@ -91,23 +91,31 @@ Public Class register
                     MessageBox.Show("Username already exists!")
                 Else
                     ' Insert new account
-                    Dim insertCmd As New MySqlCommand("INSERT INTO account(id, lastname, firstname, middlename, username, passwordusername, address, role, secques, secans, acc_status, course, subject, age, contact)  VALUES(@id, @lastname, @name, @middlename, @username, @passwordusername, @address, @role, @secques, @secans, 'OFF', @course, @subject, @age, @contact)", conn)
+                    Dim insertCmd As New MySqlCommand("INSERT INTO account(id, firstname, lastname, middlename, username, passwordusername,role, secques, secans, age, gender, contact, address,acc_status, course, subject, birthday)VALUES(@id, @firstname, @lastname, @middlename, @username, @passwordusername,@role, @secques, @secans, @age, @gender, @contact, @address,@acc_status, @course, @subject, @birthday)", conn)
+
 
                     insertCmd.Parameters.AddWithValue("@id", id.Text)
+                    insertCmd.Parameters.AddWithValue("@firstname", fn.Text)
                     insertCmd.Parameters.AddWithValue("@lastname", ln.Text)
-                    insertCmd.Parameters.AddWithValue("@name", fn.Text)
                     insertCmd.Parameters.AddWithValue("@middlename", mi.Text)
                     insertCmd.Parameters.AddWithValue("@username", un.Text)
                     insertCmd.Parameters.AddWithValue("@passwordusername", hashcode.md5fromstring(pass.Text))
-                    insertCmd.Parameters.AddWithValue("@address", add.Text)
                     insertCmd.Parameters.AddWithValue("@role", role.SelectedItem.ToString())
                     insertCmd.Parameters.AddWithValue("@secques", secques.SelectedItem.ToString())
                     insertCmd.Parameters.AddWithValue("@secans", sa.Text)
-                    insertCmd.Parameters.AddWithValue("@acc_status", "ON")
+                    insertCmd.Parameters.AddWithValue("@age", age.Text)
+                    insertCmd.Parameters.AddWithValue("@gender", gen.SelectedItem.ToString())
+                    insertCmd.Parameters.AddWithValue("@contact", ct.Text)
+                    insertCmd.Parameters.AddWithValue("@address", add.Text)
+                    insertCmd.Parameters.AddWithValue("@acc_status", stat.Text)
                     insertCmd.Parameters.AddWithValue("@course", course.Text)
                     insertCmd.Parameters.AddWithValue("@subject", subject.Text)
-                    insertCmd.Parameters.AddWithValue("@age", age.Text)
-                    insertCmd.Parameters.AddWithValue("@contact", ct.Text)
+                    insertCmd.Parameters.AddWithValue("@birthday", Convert.ToDateTime(bd.Text))
+
+
+
+
+
 
                     insertCmd.ExecuteNonQuery()
 
@@ -153,8 +161,7 @@ Public Class register
         End If
         ' Optional: show confirmation
         MessageBox.Show("You selected: " & course.SelectedItem.ToString(), "Course Selected", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-        ' I-hide yung panel
+        subject.Text = ""
         coursepanel.Visible = False
     End Sub
 
@@ -164,8 +171,7 @@ Public Class register
         End If
         ' Optional: show confirmation
         MessageBox.Show("You selected: " & subject.SelectedItem.ToString(), "Subject Selected(", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-        ' I-hide yung panel
+        course.Text = ""
         subjectpanel.Visible = False
     End Sub
 
@@ -177,27 +183,26 @@ Public Class register
         coursepanel.Visible = False
     End Sub
 
+    Private Sub MonthCalendar1_DateChanged(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DateRangeEventArgs) Handles MonthCalendar1.DateSelected
+
+        bd.Text = MonthCalendar1.SelectionStart.ToShortDateString()
+        MonthCalendar1.Visible = False
+    End Sub
+
+    Private Sub bd_Click(ByVal sender As Object, ByVal e As EventArgs) Handles bd.Click
+        MonthCalendar1.Visible = True
+
+    End Sub
+    Private Sub bd_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bd.Click
+
+        MonthCalendar1.Visible = True
+    End Sub
+
+    Private Sub bd_TextChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bd.TextChanged
+
+    End Sub
+
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub Label15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ct.TextChanged
-
-    End Sub
-
-    Private Sub Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel2.Paint
-
-    End Sub
-
-    Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label10.Click
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles age.TextChanged
 
     End Sub
 End Class
