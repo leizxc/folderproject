@@ -69,4 +69,11 @@
         loadusercontrol(stud)
         Panel3.Visible = True
     End Sub
+
+    Private Sub Button4_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Dim prfl As New adminprfl()
+        loadusercontrol(prfl)
+        Panel3.Visible = True
+
+    End Sub
 End Class

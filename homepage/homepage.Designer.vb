@@ -59,9 +59,9 @@ Partial Class Form
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(299, 6)
+        Me.Panel1.Location = New System.Drawing.Point(363, 87)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(716, 774)
+        Me.Panel1.Size = New System.Drawing.Size(676, 728)
         Me.Panel1.TabIndex = 0
         '
         'Label2

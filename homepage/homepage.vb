@@ -225,5 +225,11 @@ Public Class Form
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
         selectrole = "ADMIN"
         HighlightRole(Button7)
+        MessageBox.Show("YOU SELECT ADMIN ROLE", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+    End Sub
+
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        selectrole = "PROFESSOR"
+        HighlightRole(Button2)
     End Sub
 End Class

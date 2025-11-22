@@ -24,6 +24,7 @@ Partial Class Unlock_Account
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.Button2 = New System.Windows.Forms.Button
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,11 +46,21 @@ Partial Class Unlock_Account
         Me.DataGridView1.Size = New System.Drawing.Size(763, 383)
         Me.DataGridView1.TabIndex = 1
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(38, 91)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 55)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Update"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Unlock_Account
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Unlock_Account"
@@ -60,5 +71,6 @@ Partial Class Unlock_Account
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class

@@ -19,6 +19,7 @@ Public Class register
         Next
         Return sb.ToString()
     End Function
+
     Private Sub register_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ' Maximize window on load
         Me.WindowState = FormWindowState.Maximized
@@ -91,28 +92,26 @@ Public Class register
                     MessageBox.Show("Username already exists!")
                 Else
                     ' Insert new account
-                    Dim insertCmd As New MySqlCommand("INSERT INTO account(id, firstname, lastname, middlename, username, passwordusername,role, secques, secans, age, gender, contact, address,acc_status, course, subject, birthday)VALUES(@id, @firstname, @lastname, @middlename, @username, @passwordusername,@role, @secques, @secans, @age, @gender, @contact, @address,@acc_status, @course, @subject, @birthday)", conn)
-
+                    Dim insertCmd As New MySqlCommand("INSERT INTO account(id, lastname, firstname, middlename, username, passwordusername, address, role, secques, secans, acc_status, course, subject, age, contact, gender, birthday, section)  VALUES(@id, @lastname, @firstname, @middlename, @username, @passwordusername, @address, @role, @secques, @secans, 'OFF', @course, @subject, @age, @contact, @gender, @birthday, @section)", conn)
 
                     insertCmd.Parameters.AddWithValue("@id", id.Text)
-                    insertCmd.Parameters.AddWithValue("@firstname", fn.Text)
-                    insertCmd.Parameters.AddWithValue("@lastname", ln.Text)
-                    insertCmd.Parameters.AddWithValue("@middlename", mi.Text)
-                    insertCmd.Parameters.AddWithValue("@username", un.Text)
-                    insertCmd.Parameters.AddWithValue("@passwordusername", hashcode.md5fromstring(pass.Text))
+                    insertCmd.Parameters.AddWithValue("@lastname", ln.Text.Trim)
+                    insertCmd.Parameters.AddWithValue("@firstname", fn.Text.Trim)
+                    insertCmd.Parameters.AddWithValue("@middlename", mi.Text.Trim)
+                    insertCmd.Parameters.AddWithValue("@username", un.Text.Trim)
+                    insertCmd.Parameters.AddWithValue("@passwordusername", hashcode.md5fromstring(pass.Text).Trim)
+                    insertCmd.Parameters.AddWithValue("@address", add.Text.Trim)
                     insertCmd.Parameters.AddWithValue("@role", role.SelectedItem.ToString())
                     insertCmd.Parameters.AddWithValue("@secques", secques.SelectedItem.ToString())
-                    insertCmd.Parameters.AddWithValue("@secans", sa.Text)
-                    insertCmd.Parameters.AddWithValue("@age", age.Text)
-                    insertCmd.Parameters.AddWithValue("@gender", gen.SelectedItem.ToString())
-                    insertCmd.Parameters.AddWithValue("@contact", ct.Text)
-                    insertCmd.Parameters.AddWithValue("@address", add.Text)
+                    insertCmd.Parameters.AddWithValue("@secans", sa.Text.Trim)
                     insertCmd.Parameters.AddWithValue("@acc_status", stat.Text)
                     insertCmd.Parameters.AddWithValue("@course", course.Text)
                     insertCmd.Parameters.AddWithValue("@subject", subject.Text)
-                    insertCmd.Parameters.AddWithValue("@birthday", Convert.ToDateTime(bd.Text))
-
-
+                    insertCmd.Parameters.AddWithValue("@age", age.Text)
+                    insertCmd.Parameters.AddWithValue("@contact", ct.Text.Trim)
+                    insertCmd.Parameters.AddWithValue("@gender", gen.SelectedItem.ToString())
+                    insertCmd.Parameters.AddWithValue("@birthday", bd.Text)
+                    insertCmd.Parameters.AddWithValue("@section", section.Text.Trim)
 
 
 
@@ -123,7 +122,7 @@ Public Class register
 
 
                     ' Example: balik sa login form (palitan depende sa form name mo)
-                    Me.Hide()
+                    Me.Close()
                     Form.Show()
 
 
@@ -160,9 +159,24 @@ Public Class register
 
         End If
         ' Optional: show confirmation
-        MessageBox.Show("You selected: " & course.SelectedItem.ToString(), "Course Selected", MessageBoxButtons.OK, MessageBoxIcon.Information)
         subject.Text = ""
         coursepanel.Visible = False
+        sectionpanel.Visible = True
+        ' Load sections with limit check
+        section.Items.Clear()
+
+        Dim sections As String() = {"1-1", "1-2", "1-3"}
+
+        For Each sect In sections
+            Dim studentCount As Integer = sectioning(course.Text, sect)
+
+            If studentCount >= 30 Then
+                section.Items.Add(sect & " (FULL)")
+            Else
+                section.Items.Add(sect)
+            End If
+        Next
+
     End Sub
 
     Private Sub subject_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles subject.SelectedIndexChanged
@@ -172,6 +186,7 @@ Public Class register
         ' Optional: show confirmation
         MessageBox.Show("You selected: " & subject.SelectedItem.ToString(), "Subject Selected(", MessageBoxButtons.OK, MessageBoxIcon.Information)
         course.Text = ""
+        section.Text = ""
         subjectpanel.Visible = False
     End Sub
 
@@ -189,20 +204,106 @@ Public Class register
         MonthCalendar1.Visible = False
     End Sub
 
-    Private Sub bd_Click(ByVal sender As Object, ByVal e As EventArgs) Handles bd.Click
-        MonthCalendar1.Visible = True
-
-    End Sub
     Private Sub bd_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bd.Click
-
         MonthCalendar1.Visible = True
     End Sub
 
-    Private Sub bd_TextChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bd.TextChanged
+    Private Sub sec_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles section.SelectedIndexChanged
+        If section.SelectedItem Is Nothing Then
+
+        ElseIf section.SelectedItem.ToString().Contains("(FULL)") Then
+            MessageBox.Show("This section " & section.Text & " already reached the limit of 30 students.", "Section Full", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            section.SelectedIndex = -1
+            Return
+        End If
+
+        If section.SelectedIndex <> -1 Then
+            MessageBox.Show("You selected: " & course.SelectedItem.ToString() & section.Text, "Course and Section Selected", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+
+        subject.Text = ""
+        sectionpanel.Visible = False
+    End Sub
+    Private Function sectioning(ByVal course As String, ByVal section As String) As Integer
+        Dim sec As Integer = 0
+
+        Try
+            Using conn As New MySqlConnection(connstring)
+                conn.Open()
+
+                Dim sectioncmd As New MySqlCommand("SELECT COUNT(*) FROM account WHERE course=@course AND section=@section", conn)
+
+                sectioncmd.Parameters.AddWithValue("@course", course)
+                sectioncmd.Parameters.AddWithValue("@section", section)
+
+                Dim result = sectioncmd.ExecuteScalar()
+                If result Is Nothing OrElse IsDBNull(result) Then
+                    sec = 0
+                Else
+                    sec = Convert.ToInt32(result)
+                End If
+
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show("Error checking section limit: " & ex.Message)
+        End Try
+
+        Return sec
+    End Function
+
+    Private Sub age_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles age.KeyPress
+        If Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> ChrW(Keys.Back) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub ct_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles ct.KeyPress
+        If Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> ChrW(Keys.Back) Then
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub CapitalFirstLetter(ByVal cap As TextBox)
+        If cap.TextLength > 0 Then
+            Dim curPos As Integer = cap.SelectionStart
+            cap.Text = Char.ToUpper(cap.Text(0)) & cap.Text.Substring(1)
+            cap.SelectionStart = curPos
+        End If
+    End Sub
+
+    Private Sub ln_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ln.TextChanged
+        CapitalFirstLetter(ln)
+    End Sub
+
+    Private Sub fn_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fn.TextChanged
+        CapitalFirstLetter(fn)
+    End Sub
+
+    Private Sub mi_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mi.TextChanged
+        CapitalFirstLetter(mi)
+    End Sub
+
+    Private Sub add_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles add.TextChanged
+        CapitalFirstLetter(add)
+    End Sub
+
+    Private Sub sa_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sa.TextChanged
+        CapitalFirstLetter(sa)
+    End Sub
+
+    Private Sub un_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles un.TextChanged
+        CapitalFirstLetter(un)
+    End Sub
+
+    Private Sub pass_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel2.Paint
 
     End Sub
 End Class

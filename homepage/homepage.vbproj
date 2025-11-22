@@ -89,6 +89,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\adminprfl.Designer.vb">
+      <DependentUpon>adminprfl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\adminprfl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="admin\admin.designer.vb">
       <DependentUpon>admin.vb</DependentUpon>
     </Compile>
@@ -144,22 +150,28 @@
     <Compile Include="admin\studentlist.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="professor\profileprof.designer.vb">
+      <DependentUpon>profileprof.vb</DependentUpon>
+    </Compile>
+    <Compile Include="professor\profileprof.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="recover\recover.designer.vb">
       <DependentUpon>recover.vb</DependentUpon>
     </Compile>
     <Compile Include="recover\recover.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="register\register.designer.vb">
-      <DependentUpon>register.vb</DependentUpon>
-    </Compile>
-    <Compile Include="register\register.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="recover\ResetPassword.designer.vb">
       <DependentUpon>ResetPassword.vb</DependentUpon>
     </Compile>
     <Compile Include="recover\ResetPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register\register.designer.vb">
+      <DependentUpon>register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="register\register.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="student\profilestudent.designer.vb">
@@ -473,6 +485,10 @@
       <DependentUpon>admin.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="admin\adminprfl.resx">
+      <DependentUpon>adminprfl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin\Backup_Restore.resx">
       <DependentUpon>Backup_Restore.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -505,16 +521,20 @@
       <DependentUpon>studentlist.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="professor\profileprof.resx">
+      <DependentUpon>profileprof.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="recover\recover.resx">
       <DependentUpon>recover.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="register\register.resx">
-      <DependentUpon>register.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="recover\ResetPassword.resx">
       <DependentUpon>ResetPassword.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="register\register.resx">
+      <DependentUpon>register.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="student\profilestudent.resx">

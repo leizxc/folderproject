@@ -30,6 +30,7 @@ Partial Class admin
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
         Me.Panel3 = New System.Windows.Forms.Panel
+        Me.Button4 = New System.Windows.Forms.Button
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,6 +51,7 @@ Partial Class admin
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Panel2.Controls.Add(Me.Button4)
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.studlist)
         Me.Panel2.Controls.Add(Me.LinkLabel1)
@@ -79,7 +81,7 @@ Partial Class admin
         Me.studlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.studlist.Image = Global.homepage.My.Resources.Resources.graduation
         Me.studlist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.studlist.Location = New System.Drawing.Point(14, 140)
+        Me.studlist.Location = New System.Drawing.Point(14, 233)
         Me.studlist.Name = "studlist"
         Me.studlist.Size = New System.Drawing.Size(120, 55)
         Me.studlist.TabIndex = 3
@@ -93,7 +95,7 @@ Partial Class admin
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Image = Global.homepage.My.Resources.Resources.backup
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(14, 445)
+        Me.Button3.Location = New System.Drawing.Point(14, 428)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(120, 66)
         Me.Button3.TabIndex = 2
@@ -107,7 +109,7 @@ Partial Class admin
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Image = Global.homepage.My.Resources.Resources.user1
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(14, 335)
+        Me.Button2.Location = New System.Drawing.Point(14, 360)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(120, 62)
         Me.Button2.TabIndex = 1
@@ -121,7 +123,7 @@ Partial Class admin
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = Global.homepage.My.Resources.Resources.unlock
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(14, 238)
+        Me.Button1.Location = New System.Drawing.Point(14, 294)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(120, 60)
         Me.Button1.TabIndex = 0
@@ -135,6 +137,20 @@ Partial Class admin
         Me.Panel3.Size = New System.Drawing.Size(896, 575)
         Me.Panel3.TabIndex = 1
         Me.Panel3.Visible = False
+        '
+        'Button4
+        '
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Image = Global.homepage.My.Resources.Resources.user
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(14, 172)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(120, 55)
+        Me.Button4.TabIndex = 5
+        Me.Button4.Text = "        Profile"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'admin
         '
@@ -163,4 +179,5 @@ Partial Class admin
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents studlist As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 End Class

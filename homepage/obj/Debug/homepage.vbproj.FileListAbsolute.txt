@@ -114,3 +114,5 @@ C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.recover.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.ResetPassword.resources
 C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.register.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.adminprfl.resources
+C:\Users\crist\OneDrive\Documents\Visual Studio 2008\Projects\homepage\homepage\obj\Debug\homepage.profileprof.resources

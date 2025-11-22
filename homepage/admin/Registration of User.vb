@@ -46,6 +46,16 @@ Public Class Registration_of_User
                     appcmd2.Parameters.AddWithValue("@id", selectedId)
                     appcmd2.ExecuteNonQuery()
 
+                    Dim updateQueryprof As String = "UPDATE prof_prfl  SET acc_status='ON' WHERE id=@id"
+                    Dim appcmd3 As New MySqlCommand(updateQueryprof, connn)
+                    appcmd3.Parameters.AddWithValue("@id", selectedId)
+                    appcmd3.ExecuteNonQuery()
+
+                    Dim updateQuerycashier As String = "UPDATE cashier_prfl  SET acc_status='ON' WHERE id=@id"
+                    Dim appcmd4 As New MySqlCommand(updateQuerycashier, connn)
+                    appcmd4.Parameters.AddWithValue("@id", selectedId)
+                    appcmd4.ExecuteNonQuery()
+
                     MessageBox.Show("Account approved and activated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End Using
 

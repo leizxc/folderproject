@@ -24,6 +24,9 @@ Partial Class register
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(register))
         Me.Panel1 = New System.Windows.Forms.Panel
+        Me.sectionpanel = New System.Windows.Forms.Panel
+        Me.section = New System.Windows.Forms.ComboBox
+        Me.Label20 = New System.Windows.Forms.Label
         Me.subjectpanel = New System.Windows.Forms.Panel
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
         Me.subject = New System.Windows.Forms.ComboBox
@@ -71,6 +74,7 @@ Partial Class register
         Me.course = New System.Windows.Forms.ComboBox
         Me.Label12 = New System.Windows.Forms.Label
         Me.Panel1.SuspendLayout()
+        Me.sectionpanel.SuspendLayout()
         Me.subjectpanel.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,6 +85,7 @@ Partial Class register
         '
         Me.Panel1.BackgroundImage = Global.homepage.My.Resources.Resources.company_pic
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.sectionpanel)
         Me.Panel1.Controls.Add(Me.subjectpanel)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.coursepanel)
@@ -90,6 +95,37 @@ Partial Class register
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1322, 747)
         Me.Panel1.TabIndex = 0
+        '
+        'sectionpanel
+        '
+        Me.sectionpanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.sectionpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.sectionpanel.Controls.Add(Me.section)
+        Me.sectionpanel.Controls.Add(Me.Label20)
+        Me.sectionpanel.Location = New System.Drawing.Point(307, 99)
+        Me.sectionpanel.Name = "sectionpanel"
+        Me.sectionpanel.Size = New System.Drawing.Size(200, 100)
+        Me.sectionpanel.TabIndex = 28
+        Me.sectionpanel.Visible = False
+        '
+        'section
+        '
+        Me.section.FormattingEnabled = True
+        Me.section.Location = New System.Drawing.Point(24, 47)
+        Me.section.Name = "section"
+        Me.section.Size = New System.Drawing.Size(156, 21)
+        Me.section.TabIndex = 3
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Bookman Old Style", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(25, 25)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(160, 15)
+        Me.Label20.TabIndex = 2
+        Me.Label20.Text = "PLEASE SELECT SECTION"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'subjectpanel
         '
@@ -210,7 +246,7 @@ Partial Class register
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(117, 349)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(63, 374)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 24
         Me.MonthCalendar1.Visible = False
@@ -465,9 +501,9 @@ Partial Class register
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(34, 303)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(68, 13)
+        Me.Label4.Size = New System.Drawing.Size(72, 13)
         Me.Label4.TabIndex = 14
-        Me.Label4.Text = "Middle Initial:"
+        Me.Label4.Text = "Middle Name:"
         '
         'mi
         '
@@ -554,6 +590,8 @@ Partial Class register
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "register"
         Me.Panel1.ResumeLayout(False)
+        Me.sectionpanel.ResumeLayout(False)
+        Me.sectionpanel.PerformLayout()
         Me.subjectpanel.ResumeLayout(False)
         Me.subjectpanel.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -611,4 +649,7 @@ Partial Class register
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents gen As System.Windows.Forms.ComboBox
+    Friend WithEvents sectionpanel As System.Windows.Forms.Panel
+    Friend WithEvents section As System.Windows.Forms.ComboBox
+    Friend WithEvents Label20 As System.Windows.Forms.Label
 End Class

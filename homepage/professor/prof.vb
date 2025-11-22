@@ -1,10 +1,33 @@
-﻿Public Class prof
+﻿Imports MySql.Data.MySqlClient
+
+Public Class prof
+
+    Dim connection As String = "server=localhost;userid=root;password=;database=database_panel;port=3306"
+    Dim homes As New home()
 
     Private Sub prof_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
 
         Panel2.Dock = DockStyle.Left
         Panel2.BackColor = Color.FromArgb(40, 40, 40)
+
+        Try
+            Dim conn As New MySqlConnection(connection)
+            conn.Open()
+            Dim cmdProfile As New MySqlCommand("SELECT * FROM account WHERE username=@username", conn)
+            cmdProfile.Parameters.AddWithValue("@username", sessionlogin.loginuser)
+            Dim reader As MySqlDataReader = cmdProfile.ExecuteReader()
+
+            If reader.Read() Then
+                txtlname.Text = reader("firstname") & " " & reader("lastname")
+
+            End If
+            reader.Close()
+            conn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("ERROR: " & ex.Message)
+        End Try
 
     End Sub
 
@@ -70,6 +93,17 @@
     End Sub
 
     Private Sub Panel3_Paint_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Dim profileprof As New profileprof()
+        loadusercontrol(profileprof)
+
+
+    End Sub
+
+    Private Sub txtlname_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtlname.Click
 
     End Sub
 End Class
