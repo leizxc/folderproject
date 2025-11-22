@@ -6,32 +6,6 @@ Public Class Unlock_Account
     End Sub
 
     Private Sub DataGridView1_CellContentClick_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        Dim alreadyExists As Boolean = False
-        For Each col As DataGridViewColumn In DataGridView1.Columns
-            If col.Name = "status" AndAlso TypeOf col Is DataGridViewComboBoxColumn Then
-                alreadyExists = True
-                Exit For
-            End If
-        Next
-
-        If Not alreadyExists Then
-            Dim statusColumn As New DataGridViewComboBoxColumn()
-            statusColumn.Name = "status"
-            statusColumn.HeaderText = "Status"
-            statusColumn.FlatStyle = FlatStyle.Flat
-            statusColumn.Items.AddRange("pending", "approved", "denied")
-
-            ' Optional: remove old column first
-            If DataGridView1.Columns.Contains("status") Then
-                Dim index As Integer = DataGridView1.Columns("status").Index
-                DataGridView1.Columns.Remove("status")
-                DataGridView1.Columns.Insert(index, statusColumn)
-            Else
-                DataGridView1.Columns.Add(statusColumn)
-            End If
-        End If
-
-
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click

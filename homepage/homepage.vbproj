@@ -144,10 +144,10 @@
     <Compile Include="admin\studentlist.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="recover.designer.vb">
+    <Compile Include="recover\recover.designer.vb">
       <DependentUpon>recover.vb</DependentUpon>
     </Compile>
-    <Compile Include="recover.vb">
+    <Compile Include="recover\recover.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="register\register.designer.vb">
@@ -156,10 +156,10 @@
     <Compile Include="register\register.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ResetPassword.designer.vb">
+    <Compile Include="recover\ResetPassword.designer.vb">
       <DependentUpon>ResetPassword.vb</DependentUpon>
     </Compile>
-    <Compile Include="ResetPassword.vb">
+    <Compile Include="recover\ResetPassword.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="student\profilestudent.designer.vb">
@@ -505,7 +505,7 @@
       <DependentUpon>studentlist.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="recover.resx">
+    <EmbeddedResource Include="recover\recover.resx">
       <DependentUpon>recover.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -513,7 +513,7 @@
       <DependentUpon>register.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ResetPassword.resx">
+    <EmbeddedResource Include="recover\ResetPassword.resx">
       <DependentUpon>ResetPassword.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -840,9 +840,6 @@
     <None Include="Resources\cbd9e307-3f7a-48eb-81b1-11181b8b230b.jpg" />
     <None Include="Resources\leleiii.jpg" />
     <None Include="Resources\%24this.Icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="recover\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
